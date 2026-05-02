@@ -1,0 +1,29 @@
+services:
+  jupyter:
+    build: .
+    image: fiap-breast-cancer:dev
+    container_name: fiap-breast-cancer-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/home/jovyan/work
+    working_dir: /home/jovyan/work
+    command:
+      - start-notebook.sh
+      - --ServerApp.token=
+      - --ServerApp.password=
+      - --ServerApp.root_dir=/home/jovyan/work
+
+  notebook-run:
+    build: .
+    image: fiap-breast-cancer:dev
+    profiles: ["run"]
+    volumes:
+      - ./:/home/jovyan/work
+    working_dir: /home/jovyan/work
+    entrypoint: ["bash", "-lc"]
+    command:
+      - >-
+        jupyter nbconvert --to notebook --execute cancer_classification.ipynb
+        --output cancer_classification.executed.ipynb
+        && jupyter nbconvert --to html cancer_classification.executed.ipynb
