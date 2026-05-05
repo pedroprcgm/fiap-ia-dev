@@ -1,4 +1,4 @@
-# Pipeline para análise de turmo com classifição binária
+# Pipeline para análise de tumor com classifição binária
 
 Classificação de câncer de mama (trabalho FIAP) com SVC linear, regressão linear e visualização de importância de features via SHAP.
 
