@@ -6,7 +6,6 @@ Classificação de câncer de mama (trabalho FIAP) com SVC linear, regressão li
 
 - `cancer_classification.ipynb` — notebook principal
 - `data.csv` — dataset
-- `roteiro.md` — roteiro de apresentação
 - `Dockerfile`, `docker-compose.yml` — execução em container
 
 ## Pré-requisitos
