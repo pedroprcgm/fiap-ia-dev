@@ -2,6 +2,9 @@
 
 Classificação de câncer de mama (trabalho FIAP) com SVC linear, regressão linear e visualização de importância de features via SHAP.
 
+
+## Apresentação em vídeo
+
 [Assista ao vídeo explicando os resultados obtidos e o relatório técnico](https://www.youtube.com/watch?v=2Yq7G217B7U)
 
 ## Conteúdo
@@ -53,10 +56,6 @@ services:
 ```
 
 E acesse `http://localhost:8889/lab`.
-
-## Apresentação em vídeo
-
-[Assista ao vídeo explicando os resultados obtidos e o relatório técnico](https://www.youtube.com/watch?v=2Yq7G217B7U)
 
 ## Reprodutibilidade
 
