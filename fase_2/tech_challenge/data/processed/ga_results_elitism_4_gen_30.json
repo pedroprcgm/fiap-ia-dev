@@ -1,0 +1,1886 @@
+{
+  "baseline": {
+    "SVC Linear": {
+      "name": "SVC Linear",
+      "accuracy": 0.9385964912280702,
+      "recall": 0.9767441860465116,
+      "precision": 0.875,
+      "f1": 0.9230769230769231
+    },
+    "Linear Regression": {
+      "name": "Linear Regression",
+      "accuracy": 0.956140350877193,
+      "recall": 0.9069767441860465,
+      "precision": 0.975,
+      "f1": 0.9397590361445783
+    },
+    "Decision Tree": {
+      "name": "Decision Tree",
+      "accuracy": 0.9473684210526315,
+      "recall": 0.9302325581395349,
+      "precision": 0.9302325581395349,
+      "f1": 0.9302325581395349
+    },
+    "Logistic Regression": {
+      "name": "Logistic Regression",
+      "accuracy": 0.9736842105263158,
+      "recall": 0.9767441860465116,
+      "precision": 0.9545454545454546,
+      "f1": 0.9655172413793104
+    },
+    "KNN": {
+      "name": "KNN",
+      "accuracy": 0.956140350877193,
+      "recall": 0.8837209302325582,
+      "precision": 1.0,
+      "f1": 0.9382716049382716
+    }
+  },
+  "experiments": {
+    "exp1_baseline_ga": {
+      "config": {
+        "POPULATION_SIZE": 20,
+        "GENERATIONS": 30,
+        "CROSSOVER_RATE": 0.8,
+        "MUTATION_RATE": 0.1,
+        "MUTATION_SIGMA": 0.15,
+        "TOURNAMENT_SIZE": 3,
+        "ELITISM": 4,
+        "RANDOM_STATE": 42
+      },
+      "models": {
+        "logistic_regression": {
+          "best_params": {
+            "C": 35.90636316059008,
+            "penalty": "l1",
+            "class_weight_pos": 6
+          },
+          "validation_score": 0.9740000537605505,
+          "test_metrics": {
+            "accuracy": 0.9385964912280702,
+            "recall": 0.9767441860465116,
+            "precision": 0.875,
+            "f1": 0.9230769230769231
+          },
+          "history": [
+            {
+              "generation": 1,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9106762997040925,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 2,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9571601299700765,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 3,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9605471939138693,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 4,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9646186840460939,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 5,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9628822553686538,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 6,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9675650635913792,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 7,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9692211589580009,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 8,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9689845739056263,
+              "best_params": {
+                "C": 100.0,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 9,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9692211589580009,
+              "best_params": {
+                "C": 100.0,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 10,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9676968689205531,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 11,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9689845739056263,
+              "best_params": {
+                "C": 68.1922030397241,
+                "penalty": "l2",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 12,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.967694426918111,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 13,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9679331209725944,
+              "best_params": {
+                "C": 68.1922030397241,
+                "penalty": "l2",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 14,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9689845739056263,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 15,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9692211589580009,
+              "best_params": {
+                "C": 68.1922030397241,
+                "penalty": "l2",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 16,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9679310119704855,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 17,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9689845739056263,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 18,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9689845739056263,
+              "best_params": {
+                "C": 68.1922030397241,
+                "penalty": "l2",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 19,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9689845739056263,
+              "best_params": {
+                "C": 67.2676621993346,
+                "penalty": "l2",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 20,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9672283704726494,
+              "best_params": {
+                "C": 68.1922030397241,
+                "penalty": "l1",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 21,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9692211589580009,
+              "best_params": {
+                "C": 68.1922030397241,
+                "penalty": "l1",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 22,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9689845739056263,
+              "best_params": {
+                "C": 68.1922030397241,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 23,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9689845739056263,
+              "best_params": {
+                "C": 68.1922030397241,
+                "penalty": "l1",
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 24,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9692211589580009,
+              "best_params": {
+                "C": 100.0,
+                "penalty": "l1",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 25,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9692211589580009,
+              "best_params": {
+                "C": 68.1922030397241,
+                "penalty": "l1",
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 26,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9694601036981283,
+              "best_params": {
+                "C": 35.90636316059008,
+                "penalty": "l1",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 27,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9689892932811321,
+              "best_params": {
+                "C": 35.90636316059008,
+                "penalty": "l1",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 28,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9697014081260088,
+              "best_params": {
+                "C": 35.90636316059008,
+                "penalty": "l1",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 29,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9718495510994032,
+              "best_params": {
+                "C": 35.90636316059008,
+                "penalty": "l1",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 30,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9719907128648998,
+              "best_params": {
+                "C": 35.90636316059008,
+                "penalty": "l1",
+                "class_weight_pos": 6
+              }
+            }
+          ]
+        },
+        "svc_linear": {
+          "best_params": {
+            "C": 9.529028451003093,
+            "class_weight_pos": 10
+          },
+          "validation_score": 0.9692211589580011,
+          "test_metrics": {
+            "accuracy": 0.9298245614035088,
+            "recall": 0.9767441860465116,
+            "precision": 0.8571428571428571,
+            "f1": 0.9130434782608695
+          },
+          "history": [
+            {
+              "generation": 1,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9515066702500332,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 2,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9591184214464817,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 3,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9659594412421141,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 4,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9689845739056263,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 5,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9686428761297181,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 6,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9675869308101713,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 7,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.968404044884086,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 9
+              }
+            },
+            {
+              "generation": 8,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9675869308101713,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 9,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.968884172945425,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 10,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.968404044884086,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 11,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9678257620558032,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 12,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9692211589580009,
+              "best_params": {
+                "C": 2.2827786002194586,
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 13,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9692211589580009,
+              "best_params": {
+                "C": 2.2827786002194586,
+                "class_weight_pos": 9
+              }
+            },
+            {
+              "generation": 14,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.968404044884086,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 15,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9686428761297181,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 16,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9692211589580009,
+              "best_params": {
+                "C": 2.2827786002194586,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 17,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.967589314194577,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 18,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9678257620558034,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 19,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9684062910773434,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 20,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.967589314194577,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 21,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9684062910773437,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 22,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9692211589580009,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 23,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9675891770034287,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 24,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9684062910773434,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 25,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9681674598317116,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 26,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9678257620558032,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 27,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9686428761297181,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 28,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9684062910773434,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 9
+              }
+            },
+            {
+              "generation": 29,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9692211589580009,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 30,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9686428761297181,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 8
+              }
+            }
+          ]
+        }
+      }
+    },
+    "exp2_populacao_grande": {
+      "config": {
+        "POPULATION_SIZE": 50,
+        "GENERATIONS": 30,
+        "CROSSOVER_RATE": 0.8,
+        "MUTATION_RATE": 0.1,
+        "MUTATION_SIGMA": 0.15,
+        "TOURNAMENT_SIZE": 3,
+        "ELITISM": 4,
+        "RANDOM_STATE": 42
+      },
+      "models": {
+        "logistic_regression": {
+          "best_params": {
+            "C": 40.142081539254974,
+            "penalty": "l1",
+            "class_weight_pos": 5
+          },
+          "validation_score": 0.9740000537605505,
+          "test_metrics": {
+            "accuracy": 0.9385964912280702,
+            "recall": 0.9767441860465116,
+            "precision": 0.875,
+            "f1": 0.9230769230769231
+          },
+          "history": [
+            {
+              "generation": 1,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.914478277002896,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 2,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9547392355840553,
+              "best_params": {
+                "C": 64.48939798111937,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 3,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9583365454890526,
+              "best_params": {
+                "C": 64.48939798111937,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 4,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9634137237109032,
+              "best_params": {
+                "C": 64.48939798111937,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 5,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.966349738604913,
+              "best_params": {
+                "C": 64.48939798111937,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 6,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9678962826647038,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 7,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9678533390979872,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 8,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9674383900197143,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 9,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9686533548323021,
+              "best_params": {
+                "C": 89.13925501869196,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 10,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9678533939744466,
+              "best_params": {
+                "C": 64.48939798111937,
+                "penalty": "l1",
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 11,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.968274818748503,
+              "best_params": {
+                "C": 64.48939798111937,
+                "penalty": "l1",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 12,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9684640867904025,
+              "best_params": {
+                "C": 84.19374241615216,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 13,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9689372568951518,
+              "best_params": {
+                "C": 64.48939798111937,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 14,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9687996793074853,
+              "best_params": {
+                "C": 64.48939798111937,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 15,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9690318909161015,
+              "best_params": {
+                "C": 100.0,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 16,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9687479888532521,
+              "best_params": {
+                "C": 64.48939798111937,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 17,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9688426228742019,
+              "best_params": {
+                "C": 71.65548903208763,
+                "penalty": "l2",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 18,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9678105052841894,
+              "best_params": {
+                "C": 20.195351804213498,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 19,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9684220417009891,
+              "best_params": {
+                "C": 64.48939798111937,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 20,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9687479888532522,
+              "best_params": {
+                "C": 20.195351804213498,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 21,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9687489327283533,
+              "best_params": {
+                "C": 40.142081539254974,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 22,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.968612299015788,
+              "best_params": {
+                "C": 40.142081539254974,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 23,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9689133974442669,
+              "best_params": {
+                "C": 40.142081539254974,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 24,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9709979709166581,
+              "best_params": {
+                "C": 40.142081539254974,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 25,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9730442748000405,
+              "best_params": {
+                "C": 40.142081539254974,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 26,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9733864744428317,
+              "best_params": {
+                "C": 40.142081539254974,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 27,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9719280026760808,
+              "best_params": {
+                "C": 40.142081539254974,
+                "penalty": "l1",
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 28,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9731953186507297,
+              "best_params": {
+                "C": 40.142081539254974,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 29,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9727728951251128,
+              "best_params": {
+                "C": 40.142081539254974,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 30,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9726372052876487,
+              "best_params": {
+                "C": 39.06300943235471,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            }
+          ]
+        },
+        "svc_linear": {
+          "best_params": {
+            "C": 7.7524219473889495,
+            "class_weight_pos": 2
+          },
+          "validation_score": 0.9740000537605505,
+          "test_metrics": {
+            "accuracy": 0.9385964912280702,
+            "recall": 0.9767441860465116,
+            "precision": 0.875,
+            "f1": 0.9230769230769231
+          },
+          "history": [
+            {
+              "generation": 1,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9524408633224719,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 2,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.961048836892227,
+              "best_params": {
+                "C": 5.370095583865395,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 3,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9613934659945769,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 4,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9650187486473708,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 5,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.967841067982637,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 6,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9662795180675277,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 7,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9685845959770815,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 8,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9718342671324339,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 9,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9708116851543227,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 10,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9719861610177583,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 11,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9715609997073037,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 12,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9716038978762219,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 13,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9717521101016076,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 14,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9726810442867989,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 15,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9715083653779693,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 16,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9709081161298784,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 17,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9729649493945177,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 18,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9697804535696908,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 19,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9727337365374621,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 20,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9728703153735679,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 21,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9723655986237298,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 22,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9718334140529291,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 23,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.971793256713718,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 24,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.972026321401839,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 25,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9715618981846066,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 26,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9706139366251726,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 27,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9729534162794954,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 28,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9714252190742433,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 29,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9740000537605504,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            },
+            {
+              "generation": 30,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9723523139519,
+              "best_params": {
+                "C": 7.7524219473889495,
+                "class_weight_pos": 2
+              }
+            }
+          ]
+        }
+      }
+    },
+    "exp3_alta_mutacao": {
+      "config": {
+        "POPULATION_SIZE": 20,
+        "GENERATIONS": 30,
+        "CROSSOVER_RATE": 0.8,
+        "MUTATION_RATE": 0.35,
+        "MUTATION_SIGMA": 0.15,
+        "TOURNAMENT_SIZE": 3,
+        "ELITISM": 4,
+        "RANDOM_STATE": 42
+      },
+      "models": {
+        "logistic_regression": {
+          "best_params": {
+            "C": 51.07908395694123,
+            "penalty": "l1",
+            "class_weight_pos": 5
+          },
+          "validation_score": 0.9740000537605505,
+          "test_metrics": {
+            "accuracy": 0.9385964912280702,
+            "recall": 0.9767441860465116,
+            "precision": 0.875,
+            "f1": 0.9230769230769231
+          },
+          "history": [
+            {
+              "generation": 1,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9106762997040925,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 2,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9550621361635876,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 3,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9607935503922344,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 4,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9612600869192542,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 5,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9611523065389406,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 6,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.96769653592022,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 7,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9663083898684584,
+              "best_params": {
+                "C": 13.745351808288653,
+                "penalty": "l1",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 8,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.966193780101231,
+              "best_params": {
+                "C": 22.39216559391648,
+                "penalty": "l1",
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 9,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9654796697487411,
+              "best_params": {
+                "C": 100.0,
+                "penalty": "l1",
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 10,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9683035380415627,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 11,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9694624633858812,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 12,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9692258783335067,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 13,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9699427125538893,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 14,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9704541541972057,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 15,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9702175691448313,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 16,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9700144227610226,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 17,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9714099331577157,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 18,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9715102130112478,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 19,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9688198125548805,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 20,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9711708749230926,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 21,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9709320436774604,
+              "best_params": {
+                "C": 51.07908395694123,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 22,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9717491577513755,
+              "best_params": {
+                "C": 64.19526262403693,
+                "penalty": "l1",
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 23,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9719881024915027,
+              "best_params": {
+                "C": 64.19526262403693,
+                "penalty": "l1",
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 24,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9688199260493761,
+              "best_params": {
+                "C": 52.05737143748435,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            },
+            {
+              "generation": 25,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.972465991971758,
+              "best_params": {
+                "C": 64.19526262403693,
+                "penalty": "l1",
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 26,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9672858642605832,
+              "best_params": {
+                "C": 64.19526262403693,
+                "penalty": "l1",
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 27,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9693979818886678,
+              "best_params": {
+                "C": 64.19526262403693,
+                "penalty": "l1",
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 28,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9705569072329865,
+              "best_params": {
+                "C": 64.19526262403693,
+                "penalty": "l1",
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 29,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9702153229515738,
+              "best_params": {
+                "C": 52.05737143748435,
+                "penalty": "l1",
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 30,
+              "best_score": 0.9740000537605505,
+              "avg_score": 0.9688199260493761,
+              "best_params": {
+                "C": 52.05737143748435,
+                "penalty": "l1",
+                "class_weight_pos": 5
+              }
+            }
+          ]
+        },
+        "svc_linear": {
+          "best_params": {
+            "C": 9.529028451003093,
+            "class_weight_pos": 10
+          },
+          "validation_score": 0.9692211589580011,
+          "test_metrics": {
+            "accuracy": 0.9298245614035088,
+            "recall": 0.9767441860465116,
+            "precision": 0.8571428571428571,
+            "f1": 0.9130434782608695
+          },
+          "history": [
+            {
+              "generation": 1,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9515066702500332,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 2,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9596033748946686,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 3,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9623516705549525,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 4,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9649057421158247,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 5,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9665377240703968,
+              "best_params": {
+                "C": 2.647008565947967,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 6,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9657185009943732,
+              "best_params": {
+                "C": 9.212848522089411,
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 7,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9645573057601442,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 8,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9656154972729484,
+              "best_params": {
+                "C": 9.529028451003093,
+                "class_weight_pos": 9
+              }
+            },
+            {
+              "generation": 9,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9629347787700834,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 10,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9667698167362566,
+              "best_params": {
+                "C": 9.212848522089411,
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 11,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9672474792275205,
+              "best_params": {
+                "C": 9.212848522089411,
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 12,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9654798069398896,
+              "best_params": {
+                "C": 9.212848522089411,
+                "class_weight_pos": 4
+              }
+            },
+            {
+              "generation": 13,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.966772062929514,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 14,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9646626928659747,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 15,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9638454416009115,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 16,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.96455968914455,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 9
+              }
+            },
+            {
+              "generation": 17,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.96455968914455,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 18,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.965613251079691,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 10
+              }
+            },
+            {
+              "generation": 19,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9665333688750305,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 20,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9659527026623417,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 7
+              }
+            },
+            {
+              "generation": 21,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9661915339079737,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 22,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.966772062929514,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 23,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9679308747793369,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 24,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9632672959637774,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 25,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.966772062929514,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 26,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9635061272094092,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 27,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9661937801012312,
+              "best_params": {
+                "C": 9.477349410301175,
+                "class_weight_pos": 8
+              }
+            },
+            {
+              "generation": 28,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.968404044884086,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 9
+              }
+            },
+            {
+              "generation": 29,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9684062910773434,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 6
+              }
+            },
+            {
+              "generation": 30,
+              "best_score": 0.9692211589580011,
+              "avg_score": 0.9653766660273163,
+              "best_params": {
+                "C": 2.6491287065807367,
+                "class_weight_pos": 9
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

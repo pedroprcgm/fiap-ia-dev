@@ -6,3 +6,46 @@
 # Headless notebook outputs from the docker `notebook-run` service
 breast_cancer_v2/*.executed.ipynb
 breast_cancer_v2/*.executed.html
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Environments
+.venv/
+venv/
+env/
+Pipfile.lock
+
+# Env vars / secrets
+.env
+*.key
+*credentials*.json
+
+# Data (large/derived files should not be committed; the small source dataset is kept)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/raw/data.csv
+!data/processed/.gitkeep
+!data/processed/ga_results.json
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Cloud / IaC local state
+infra/**/.terraform/
+infra/**/*.tfstate
+infra/**/*.tfstate.backup
