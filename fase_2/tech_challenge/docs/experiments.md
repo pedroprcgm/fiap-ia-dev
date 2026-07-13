@@ -54,9 +54,12 @@ experimento, não um erro de execução, e tem explicações identificáveis:
 
 ### Ampliar o intervalo de `class_weight_pos` (hoje [1, 10]) para checar se o ótimo real está além do limite atual.
   - Alterado para [1, 20] não surtiu efeito prático 
+  
   - Alterado (baseline): 
+    
     ![alt text](image.png) 
   - Padrão [1,10] (baseline): 
+  
     ![alt text](image-1.png) 
   - Alterado (pop grande): 
     
