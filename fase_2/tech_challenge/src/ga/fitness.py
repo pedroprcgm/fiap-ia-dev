@@ -1,6 +1,7 @@
 """Função fitness: decodifica um indivíduo em um modelo sklearn, treina, avalia e
 combina as métricas em um único score escalar que o GA maximiza.
 """
+import warnings
 from dataclasses import dataclass
 from typing import Any, Dict
 
@@ -13,6 +14,12 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
 from fase_2.tech_challenge.src.ga.encoding import decode_individual
+
+warnings.filterwarnings(
+    "ignore",
+    message=r".*encountered in matmul.*",
+    category=RuntimeWarning,
+)
 
 # Pesos da combinação linear das métricas. Recall da classe maligna (1) tem o maior
 # peso porque, no contexto de diagnóstico médico, um falso negativo (dizer que um

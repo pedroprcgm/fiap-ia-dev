@@ -1,7 +1,6 @@
 """Avaliação da qualidade das explicações geradas pela LLM.
 
-Requisito explícito do Tech Challenge (item 3): "Avaliar a qualidade das
-interpretações geradas". Este módulo não usa outra LLM como "juiz" — aplica uma
+Este módulo não usa outra LLM como "juiz" — aplica uma
 checklist objetiva que a pessoa avaliadora preenche ao revisar cada explicação, e
 formata o resultado para colar direto no relatório técnico. Uma heurística simples
 (`flag_jargon`) faz uma triagem automática antes da revisão humana.
@@ -28,8 +27,7 @@ class QualityCheck:
     """Uma linha da checklist de avaliação, para uma explicação específica.
 
     Os 4 campos booleanos são preenchidos manualmente pela pessoa avaliadora ao
-    ler a explicação lado a lado com os dados de entrada (essa é a avaliação
-    exigida pelo Tech Challenge — não precisa ser automatizada com outra LLM).
+    ler a explicação lado a lado com os dados de entrada.
     """
     sample_id: str
     explanation: str

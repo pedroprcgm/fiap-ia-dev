@@ -13,6 +13,8 @@ from typing import Any, Callable, Dict
 from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 
@@ -34,10 +36,15 @@ class ModelResult:
 BASELINE_MODELS: Dict[str, Callable[[], Any]] = {
     "SVC Linear": lambda: SVC(kernel="linear", C=2, class_weight={0: 1, 1: 5}),
     # Nota: LinearRegression não é um classificador — é usado aqui apenas para
-    # reproduzir fielmente o experimento do Módulo 1 (threshold em 0.5). Gera
-    # RuntimeWarnings de overflow/divisão por zero por falta de normalização das
-    # features. Não recomendado como candidato à otimização via GA.
-    "Linear Regression": lambda: LinearRegression(),
+    # reproduzir fielmente o experimento do Módulo 1 (threshold em 0.5). Envolvido
+    # num Pipeline com StandardScaler só para evitar instabilidade numérica
+    # (features sem normalização e correlacionadas deixam a matriz mal-condicionada);
+    # como OLS é invariante a reparametrização linear das features, isso não muda
+    # nenhuma métrica, só evita o mal-condicionamento. Não recomendado como
+    # candidato à otimização via GA.
+    "Linear Regression": lambda: Pipeline(
+        [("scaler", StandardScaler()), ("clf", LinearRegression())]
+    ),
     "Decision Tree": lambda: DecisionTreeClassifier(max_depth=5, random_state=42),
     "Logistic Regression": lambda: LogisticRegression(
         max_iter=10000, random_state=42, class_weight={0: 1, 1: 5}

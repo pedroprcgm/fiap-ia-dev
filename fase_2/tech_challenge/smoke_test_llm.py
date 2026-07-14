@@ -1,10 +1,11 @@
 """Smoke test manual
-
-Uso: python smoke_test_llm.py
 """
+import logging
 import sys
 
 sys.path.insert(0, ".")
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
 import numpy as np
 
@@ -30,14 +31,14 @@ print("   ---")
 print(explanation)
 print("   ---")
 
-print("\n3) Gerando explicação do comparativo GA vs. baseline (números reais de data/processed/ga_results.json)...")
-baseline_metrics = {"accuracy": 0.9737, "recall": 0.9767, "precision": 0.9545, "f1": 0.9655}
-optimized_metrics = {"accuracy": 0.9386, "recall": 0.9767, "precision": 0.875, "f1": 0.9231}
-config = {"population_size": 50, "generations": 15}
-comparison = explain_comparison("logistic_regression", baseline_metrics, optimized_metrics, config)
-print("   Resposta da API recebida:\n")
-print("   ---")
-print(comparison)
-print("   ---")
+# print("\n3) Gerando explicação do comparativo GA vs. baseline (números reais de data/processed/ga_results.json)...")
+# baseline_metrics = {"accuracy": 0.9737, "recall": 0.9767, "precision": 0.9545, "f1": 0.9655}
+# optimized_metrics = {"accuracy": 0.9386, "recall": 0.9767, "precision": 0.875, "f1": 0.9231}
+# config = {"population_size": 50, "generations": 15}
+# comparison = explain_comparison("logistic_regression", baseline_metrics, optimized_metrics, config)
+# print("   Resposta da API recebida:\n")
+# print("   ---")
+# print(comparison)
+# print("   ---")
 
 print("\nSmoke test concluído com sucesso.")

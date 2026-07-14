@@ -78,7 +78,7 @@ def explain_diagnosis(
     top_n: int = 5,
 ) -> str:
     """Gera a explicação em linguagem natural para uma única amostra (diagnóstico
-    individual) — Requisito 3 do Tech Challenge."""
+    individual)"""
     sample_2d = sample.reshape(1, -1)
     prediction, probability = _predict_label_and_probability(model, sample_2d)
     label = "Maligno" if prediction == 1 else "Benigno"
@@ -94,8 +94,7 @@ def explain_comparison(
     optimized_metrics: Dict[str, float],
     experiment_config: Dict,
 ) -> str:
-    """Gera a explicação em linguagem natural do comparativo GA vs. baseline —
-    complementa o Requisito 3 e reaproveita os resultados de `data/processed/ga_results.json`."""
+    """Gera a explicação em linguagem natural do comparativo GA vs. baseline"""
     messages = build_comparison_prompt(
         model_family, baseline_metrics, optimized_metrics, experiment_config
     )
