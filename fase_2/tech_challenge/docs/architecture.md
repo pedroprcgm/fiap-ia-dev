@@ -23,10 +23,4 @@
 - **Observabilidade:** logging dos experimentos do GA e monitoramento em produção via
   Azure Monitor / Application Insights. **PENDENTE**
 - **Infraestrutura (`infra/azure/`):** IaC para deploy com escalabilidade automática no
-  Azure (ex.: Azure Container Apps ou App Service com autoscale, definido via Bicep/Terraform). **PENDENTE**
-
-## Próximos passos
-
-- Integrar a LLM (OpenAI GPT) em `src/llm/` para gerar explicações a partir dos
-  resultados do GA (ver `docs/experiments.md`).
-- Detalhar o diagrama de componentes de infraestrutura assim que o serviço Azure for escolhido.
+  Azure (Azure Container Apps). **PENDENTE**
