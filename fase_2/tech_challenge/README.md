@@ -4,6 +4,10 @@
 
 Otimizar os hiperparâmetros dos modelos de diagnóstico do Módulo 1 usando um Algoritmo Genético (GA) e integrar uma LLM para tornar os resultados interpretáveis para médicos.
 
+## Apresentação em vídeo
+
+[Assista ao vídeo explicando sobre a otimização de modelos de diagnóstico](https://www.youtube.com/watch?v=_QfY3hMzgxY)
+
 ## Decisões de projeto
 
 - **Gerenciador de dependências:** Pipenv
