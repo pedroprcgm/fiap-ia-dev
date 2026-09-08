@@ -70,7 +70,7 @@ def run_all_experiments() -> dict:
         for model_family in MODEL_FAMILIES:
             logger.info("\n=== Experimento %s | modelo %s ===", exp_name, model_family)
             ga = GeneticAlgorithm(model_family, config)
-            result = ga.run(X_train_full, y_train_full, live_plot=True, save_plot=True, live_plot_delay=0.1)
+            result = ga.run(X_train_full, y_train_full, live_plot=True, save_plot=True, live_plot_delay=0.001)
 
             test_metrics = _final_test_metrics(
                 model_family, result.best_individual, X_train_full, y_train_full, X_test, y_test
