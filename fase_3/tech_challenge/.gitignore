@@ -11,3 +11,4 @@ logs/*.jsonl
 *.egg-info/
 .venv/
 venv/
+node_modules/
