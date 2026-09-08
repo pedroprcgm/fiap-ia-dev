@@ -1,0 +1,51 @@
+[
+  {
+    "type": "protocol",
+    "specialty": "Cardiologia",
+    "condition": "Hipertensao Arterial Sistemica",
+    "title": "Protocolo interno - Hipertensao Arterial Sistemica",
+    "content": "PROTOCOLO CLINICO INTERNO - CARDIOLOGIA\nCondicao: Hipertensao Arterial Sistemica\n\n1. Quadro clinico sugestivo: cefaleia, tontura, pressao arterial >= 140/90 mmHg em duas aferições.\n2. Exames complementares recomendados: Eletrocardiograma, Perfil lipidico, Funcao renal (ureia/creatinina).\n3. Conduta preconizada pelo hospital: Reforcar mudanca de estilo de vida (reducao de sodio, atividade fisica) e iniciar inibidor da ECA em dose baixa, reavaliando em 4 semanas.\n4. Este protocolo e uma sugestao institucional e nao substitui o julgamento clinico do medico assistente nem a avaliacao individual do paciente.\n"
+  },
+  {
+    "type": "protocol",
+    "specialty": "Endocrinologia",
+    "condition": "Diabetes Mellitus tipo 2",
+    "title": "Protocolo interno - Diabetes Mellitus tipo 2",
+    "content": "PROTOCOLO CLINICO INTERNO - ENDOCRINOLOGIA\nCondicao: Diabetes Mellitus tipo 2\n\n1. Quadro clinico sugestivo: poliuria, polidipsia, glicemia de jejum >= 126 mg/dL em duas ocasioes.\n2. Exames complementares recomendados: Glicemia de jejum, Hemoglobina glicada (HbA1c), Funcao renal.\n3. Conduta preconizada pelo hospital: Iniciar metformina, orientacao nutricional e reavaliacao de HbA1c em 90 dias.\n4. Este protocolo e uma sugestao institucional e nao substitui o julgamento clinico do medico assistente nem a avaliacao individual do paciente.\n"
+  },
+  {
+    "type": "protocol",
+    "specialty": "Pneumologia",
+    "condition": "Pneumonia Adquirida na Comunidade",
+    "title": "Protocolo interno - Pneumonia Adquirida na Comunidade",
+    "content": "PROTOCOLO CLINICO INTERNO - PNEUMOLOGIA\nCondicao: Pneumonia Adquirida na Comunidade\n\n1. Quadro clinico sugestivo: febre, tosse produtiva, dispneia, estertores localizados na ausculta.\n2. Exames complementares recomendados: Radiografia de torax, Hemograma completo, Proteina C reativa.\n3. Conduta preconizada pelo hospital: Classificar gravidade (escore CURB-65); iniciar antibioticoterapia empirica conforme protocolo institucional e reavaliar em 48-72h.\n4. Este protocolo e uma sugestao institucional e nao substitui o julgamento clinico do medico assistente nem a avaliacao individual do paciente.\n"
+  },
+  {
+    "type": "protocol",
+    "specialty": "Gastroenterologia",
+    "condition": "Doenca do Refluxo Gastroesofagico",
+    "title": "Protocolo interno - Doenca do Refluxo Gastroesofagico",
+    "content": "PROTOCOLO CLINICO INTERNO - GASTROENTEROLOGIA\nCondicao: Doenca do Refluxo Gastroesofagico\n\n1. Quadro clinico sugestivo: pirose, regurgitacao acida, piora pos-prandial e ao deitar.\n2. Exames complementares recomendados: Endoscopia digestiva alta (se sinais de alarme), Nenhum exame se caso tipico.\n3. Conduta preconizada pelo hospital: Orientar medidas antirrefluxo e iniciar inibidor de bomba de protons por 4-8 semanas.\n4. Este protocolo e uma sugestao institucional e nao substitui o julgamento clinico do medico assistente nem a avaliacao individual do paciente.\n"
+  },
+  {
+    "type": "protocol",
+    "specialty": "Ortopedia",
+    "condition": "Lombalgia Mecanica Aguda",
+    "title": "Protocolo interno - Lombalgia Mecanica Aguda",
+    "content": "PROTOCOLO CLINICO INTERNO - ORTOPEDIA\nCondicao: Lombalgia Mecanica Aguda\n\n1. Quadro clinico sugestivo: dor lombar sem irradiacao, sem sinais de alarme (febre, perda de peso, deficit neurologico).\n2. Exames complementares recomendados: Nenhum exame de imagem na fase aguda sem sinais de alarme.\n3. Conduta preconizada pelo hospital: Analgesia, orientacao de manutencao de atividade e retorno se sinais de alarme ou ausencia de melhora em 4-6 semanas.\n4. Este protocolo e uma sugestao institucional e nao substitui o julgamento clinico do medico assistente nem a avaliacao individual do paciente.\n"
+  },
+  {
+    "type": "protocol",
+    "specialty": "Infectologia",
+    "condition": "Infeccao do Trato Urinario nao complicada",
+    "title": "Protocolo interno - Infeccao do Trato Urinario nao complicada",
+    "content": "PROTOCOLO CLINICO INTERNO - INFECTOLOGIA\nCondicao: Infeccao do Trato Urinario nao complicada\n\n1. Quadro clinico sugestivo: disuria, polaciuria, urgencia miccional, sem febre.\n2. Exames complementares recomendados: Urina tipo I (EAS), Urocultura se recorrencia ou falha terapeutica.\n3. Conduta preconizada pelo hospital: Antibioticoterapia empirica de curta duracao conforme protocolo institucional e resistencia bacteriana local.\n4. Este protocolo e uma sugestao institucional e nao substitui o julgamento clinico do medico assistente nem a avaliacao individual do paciente.\n"
+  },
+  {
+    "type": "protocol",
+    "specialty": "Oncologia",
+    "condition": "Cancer de Mama",
+    "title": "Protocolo interno - Cancer de Mama (por estagio)",
+    "content": "PROTOCOLO CLINICO INTERNO - ONCOLOGIA\nCondicao: Cancer de Mama (conduta varia conforme estagio)\n\nESTAGIO INICIAL (estagios I e II, doenca localizada)\n- Quadro clinico sugestivo: nodulo mamario palpavel ou achado em mamografia de rastreamento, sem sinais clinicos de disseminacao a distancia.\n- Exames complementares recomendados: Mamografia diagnostica, Ultrassonografia mamaria, Biopsia percutanea (core biopsy), Avaliacao de receptores hormonais (RE/RP) e HER2.\n- Proximos passos / conduta preconizada pelo hospital: Encaminhar para avaliacao cirurgica (cirurgia conservadora ou mastectomia conforme extensao e preferencia da paciente) com pesquisa de linfonodo sentinela, seguida de avaliacao de terapia adjuvante (quimioterapia, hormonioterapia e/ou radioterapia conforme perfil do tumor) em conjunto com a equipe de oncologia.\n\nESTAGIO MEDIO (estagio III, doenca localmente avancada)\n- Quadro clinico sugestivo: tumor de maior dimensao, possivel comprometimento de linfonodos axilares, pele ou parede toracica, sem metastase a distancia confirmada.\n- Exames complementares recomendados: Estadiamento completo (tomografia de torax e abdome, cintilografia ossea), Biopsia de linfonodo suspeito, Reavaliacao de receptores hormonais e HER2.\n- Proximos passos / conduta preconizada pelo hospital: Iniciar quimioterapia neoadjuvante para reducao do tumor, com reavaliacao cirurgica apos resposta ao tratamento; radioterapia complementar conforme resposta e caracteristicas do tumor; caso discutido em junta multidisciplinar de oncologia antes de definir a sequencia terapeutica.\n\nESTAGIO AVANCADO (estagio IV, doenca metastatica)\n- Quadro clinico sugestivo: doenca com metastase confirmada (ossea, pulmonar, hepatica, cerebral ou outros sitios), podendo cursar com sintomas sistemicos como dor ossea, perda de peso e fadiga.\n- Exames complementares recomendados: Exames de imagem para mapeamento completo de metastases (tomografia, cintilografia ossea, ressonancia conforme sitio), Biopsia do sitio metastatico quando acessivel, Reavaliacao de biomarcadores para direcionar terapia sistemica.\n- Proximos passos / conduta preconizada pelo hospital: Priorizar tratamento sistemico com intuito de controle da doenca e qualidade de vida (quimioterapia, terapia-alvo e/ou hormonioterapia conforme perfil tumoral), associado a cuidados de suporte para controle de sintomas; discutir precocemente com a paciente e familia a incorporacao de cuidados paliativos, sem prejuizo do tratamento oncologico ativo.\n\nEste protocolo e uma sugestao institucional e nao substitui o julgamento clinico do medico assistente nem a avaliacao individual do paciente.\n"
+  }
+]

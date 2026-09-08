@@ -1,0 +1,14 @@
+{
+  "name": "assistente-medico-api",
+  "version": "1.0.0",
+  "description": "API de integracao entre o agente de IA (src/llm/service, Python) e a UI (src/ui, Angular) - ver docs/Documento de Especificacoes - UI do Assistente Medico.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

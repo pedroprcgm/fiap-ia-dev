@@ -1,0 +1,100 @@
+<div class="page">
+  <header class="page-header">
+    <h1>Assistente Medico Virtual</h1>
+    <p class="subtitle">Apoio a decisao clinica</p>
+  </header>
+
+  <main class="page-body">
+    <!-- Tela 1: selecao de paciente -->
+    @if (screen() === 'select-patient') {
+      <section class="card">
+        <h2>Selecione o paciente</h2>
+
+        @if (loadingPatients()) {
+          <p class="muted">Carregando pacientes...</p>
+        }
+
+        @if (patientsError()) {
+          <p class="error-message">{{ patientsError() }}</p>
+          <button type="button" class="secondary" (click)="loadPatients()">Tentar novamente</button>
+        }
+
+        @if (!loadingPatients() && !patientsError()) {
+          @if (patients().length === 0) {
+            <p class="muted">Nenhum paciente encontrado.</p>
+          } @else {
+            <ul class="patient-list">
+              @for (patient of patients(); track patient.patient_id) {
+                <li>
+                  <button type="button" class="patient-item" (click)="selectPatient(patient)">
+                    <span class="patient-name">{{ patient.name }}</span>
+                    <span class="patient-condition">{{ patient.main_condition }}</span>
+                  </button>
+                </li>
+              }
+            </ul>
+          }
+        }
+      </section>
+    }
+
+    <!-- Tela 2: pergunta -->
+    @if (screen() === 'ask-question' && selectedPatient(); as patient) {
+      <section class="card">
+        <button type="button" class="link-back" (click)="backToPatientSelection()">&larr; Trocar paciente</button>
+
+        <h2>{{ patient.name }}</h2>
+        <p class="muted">{{ patient.main_condition }}</p>
+
+        <label for="question">Sua pergunta</label>
+        <textarea
+          id="question"
+          rows="4"
+          [ngModel]="question()"
+          (ngModelChange)="question.set($event)"
+          placeholder="Ex.: Quais os proximos passos de tratamento recomendados?"
+        ></textarea>
+
+        @if (askError()) {
+          <p class="error-message">{{ askError() }}</p>
+        }
+
+        <button
+          type="button"
+          class="primary"
+          [disabled]="asking() || !question().trim()"
+          (click)="submitQuestion()"
+        >
+          {{ asking() ? 'Consultando...' : 'Perguntar' }}
+        </button>
+      </section>
+    }
+
+    <!-- Tela 3: resposta -->
+    @if (screen() === 'answer' && answer(); as response) {
+      <section class="card">
+        <button type="button" class="link-back" (click)="backToQuestion()">&larr; Voltar</button>
+
+        <h2>Resposta</h2>
+        <p class="response-text">{{ response.response_text }}</p>
+
+        @if (response.pending_exam_notice) {
+          <p class="notice">{{ response.pending_exam_notice }}</p>
+        }
+
+        @if (response.sources.length > 0) {
+          <div class="sources">
+            <h3>Fontes consultadas</h3>
+            <ul>
+              @for (source of response.sources; track source) {
+                <li>{{ source }}</li>
+              }
+            </ul>
+          </div>
+        }
+
+        <button type="button" class="primary" (click)="askAnotherQuestion()">Fazer outra pergunta</button>
+      </section>
+    }
+  </main>
+</div>

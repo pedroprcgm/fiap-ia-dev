@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+data/db/*
+!data/db/.gitkeep
+models/
+logs/*.log
+logs/*.jsonl
+.DS_Store
+*.egg-info/
+.venv/
+venv/

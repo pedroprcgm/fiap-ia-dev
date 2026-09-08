@@ -1,0 +1,65 @@
+[
+  {
+    "type": "faq",
+    "specialty": "Cardiologia",
+    "condition": "Hipertensao Arterial Sistemica",
+    "question": "Qual a conduta preconizada pelo hospital para Hipertensao Arterial Sistemica?",
+    "answer": "Para Hipertensao Arterial Sistemica (Cardiologia), o protocolo interno recomenda: Reforcar mudanca de estilo de vida (reducao de sodio, atividade fisica) e iniciar inibidor da ECA em dose baixa, reavaliando em 4 semanas. Exames de apoio sugeridos: Eletrocardiograma, Perfil lipidico, Funcao renal (ureia/creatinina)."
+  },
+  {
+    "type": "faq",
+    "specialty": "Endocrinologia",
+    "condition": "Diabetes Mellitus tipo 2",
+    "question": "Qual a conduta preconizada pelo hospital para Diabetes Mellitus tipo 2?",
+    "answer": "Para Diabetes Mellitus tipo 2 (Endocrinologia), o protocolo interno recomenda: Iniciar metformina, orientacao nutricional e reavaliacao de HbA1c em 90 dias. Exames de apoio sugeridos: Glicemia de jejum, Hemoglobina glicada (HbA1c), Funcao renal."
+  },
+  {
+    "type": "faq",
+    "specialty": "Pneumologia",
+    "condition": "Pneumonia Adquirida na Comunidade",
+    "question": "Qual a conduta preconizada pelo hospital para Pneumonia Adquirida na Comunidade?",
+    "answer": "Para Pneumonia Adquirida na Comunidade (Pneumologia), o protocolo interno recomenda: Classificar gravidade (escore CURB-65); iniciar antibioticoterapia empirica conforme protocolo institucional e reavaliar em 48-72h. Exames de apoio sugeridos: Radiografia de torax, Hemograma completo, Proteina C reativa."
+  },
+  {
+    "type": "faq",
+    "specialty": "Gastroenterologia",
+    "condition": "Doenca do Refluxo Gastroesofagico",
+    "question": "Qual a conduta preconizada pelo hospital para Doenca do Refluxo Gastroesofagico?",
+    "answer": "Para Doenca do Refluxo Gastroesofagico (Gastroenterologia), o protocolo interno recomenda: Orientar medidas antirrefluxo e iniciar inibidor de bomba de protons por 4-8 semanas. Exames de apoio sugeridos: Endoscopia digestiva alta (se sinais de alarme), Nenhum exame se caso tipico."
+  },
+  {
+    "type": "faq",
+    "specialty": "Ortopedia",
+    "condition": "Lombalgia Mecanica Aguda",
+    "question": "Qual a conduta preconizada pelo hospital para Lombalgia Mecanica Aguda?",
+    "answer": "Para Lombalgia Mecanica Aguda (Ortopedia), o protocolo interno recomenda: Analgesia, orientacao de manutencao de atividade e retorno se sinais de alarme ou ausencia de melhora em 4-6 semanas. Exames de apoio sugeridos: Nenhum exame de imagem na fase aguda sem sinais de alarme."
+  },
+  {
+    "type": "faq",
+    "specialty": "Infectologia",
+    "condition": "Infeccao do Trato Urinario nao complicada",
+    "question": "Qual a conduta preconizada pelo hospital para Infeccao do Trato Urinario nao complicada?",
+    "answer": "Para Infeccao do Trato Urinario nao complicada (Infectologia), o protocolo interno recomenda: Antibioticoterapia empirica de curta duracao conforme protocolo institucional e resistencia bacteriana local. Exames de apoio sugeridos: Urina tipo I (EAS), Urocultura se recorrencia ou falha terapeutica."
+  },
+  {
+    "type": "faq",
+    "specialty": "Oncologia",
+    "condition": "Cancer de Mama - Estagio Inicial",
+    "question": "Quais os proximos passos para uma pessoa com Cancer de Mama detectado em estagio inicial?",
+    "answer": "Para Cancer de Mama em estagio inicial (estagios I e II, doenca localizada), o protocolo interno recomenda: Encaminhar para avaliacao cirurgica (cirurgia conservadora ou mastectomia conforme extensao e preferencia da paciente) com pesquisa de linfonodo sentinela, seguida de avaliacao de terapia adjuvante (quimioterapia, hormonioterapia e/ou radioterapia conforme perfil do tumor) em conjunto com a equipe de oncologia. Exames de apoio sugeridos: Mamografia diagnostica, Ultrassonografia mamaria, Biopsia percutanea (core biopsy), Avaliacao de receptores hormonais (RE/RP) e HER2."
+  },
+  {
+    "type": "faq",
+    "specialty": "Oncologia",
+    "condition": "Cancer de Mama - Estagio Medio",
+    "question": "Quais os proximos passos para uma pessoa com Cancer de Mama detectado em estagio medio?",
+    "answer": "Para Cancer de Mama em estagio medio (estagio III, doenca localmente avancada), o protocolo interno recomenda: Iniciar quimioterapia neoadjuvante para reducao do tumor, com reavaliacao cirurgica apos resposta ao tratamento; radioterapia complementar conforme resposta e caracteristicas do tumor; caso discutido em junta multidisciplinar de oncologia antes de definir a sequencia terapeutica. Exames de apoio sugeridos: Estadiamento completo (tomografia de torax e abdome, cintilografia ossea), Biopsia de linfonodo suspeito, Reavaliacao de receptores hormonais e HER2."
+  },
+  {
+    "type": "faq",
+    "specialty": "Oncologia",
+    "condition": "Cancer de Mama - Estagio Avancado",
+    "question": "Quais os proximos passos para uma pessoa com Cancer de Mama detectado em estagio avancado?",
+    "answer": "Para Cancer de Mama em estagio avancado (estagio IV, doenca metastatica), o protocolo interno recomenda: Priorizar tratamento sistemico com intuito de controle da doenca e qualidade de vida (quimioterapia, terapia-alvo e/ou hormonioterapia conforme perfil tumoral), associado a cuidados de suporte para controle de sintomas; discutir precocemente com a paciente e familia a incorporacao de cuidados paliativos, sem prejuizo do tratamento oncologico ativo. Exames de apoio sugeridos: Exames de imagem para mapeamento completo de metastases (tomografia, cintilografia ossea, ressonancia conforme sitio), Biopsia do sitio metastatico quando acessivel, Reavaliacao de biomarcadores para direcionar terapia sistemica."
+  }
+]
