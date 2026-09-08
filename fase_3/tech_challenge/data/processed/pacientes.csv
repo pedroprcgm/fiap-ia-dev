@@ -1,0 +1,9 @@
+patient_id,name,age,sex,main_condition,admission_date
+PAC0001,Paciente Alfa,35,F,Infeccao do Trato Urinario nao complicada,2026-08-30
+PAC0002,Paciente Beta,42,F,Diabetes Mellitus tipo 2,2026-09-04
+PAC0003,Paciente Gama,75,F,Infeccao do Trato Urinario nao complicada,2026-08-25
+PAC0004,Paciente Delta,29,F,Hipertensao Arterial Sistemica,2026-09-01
+PAC0005,Paciente Epsilon,60,F,Diabetes Mellitus tipo 2,2026-09-01
+PAC0006,Paciente Zeta,69,M,Infeccao do Trato Urinario nao complicada,2026-08-31
+PAC0007,Paciente Eta,65,M,Doenca do Refluxo Gastroesofagico,2026-09-07
+PAC0008,Paciente Teta,72,M,Diabetes Mellitus tipo 2,2026-08-28

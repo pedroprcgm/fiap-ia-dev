@@ -1,0 +1,13 @@
+PRONTUARIO - PAC0004
+Nome: Paciente Delta
+Idade: 29 | Sexo: F
+Condicao principal: Hipertensao Arterial Sistemica
+Data de admissao: 2026-09-01
+
+Exames:
+  - Eletrocardiograma: realizado (solicitado em 2026-09-02)
+  - Perfil lipidico: realizado (solicitado em 2026-09-07)
+
+Historico de eventos:
+  - 2026-09-01: Admissao com quadro sugestivo de Hipertensao Arterial Sistemica. Paciente F, 29 anos.
+  - 2026-09-05: Reavaliacao clinica em curso, aguardando resultado de exames complementares.

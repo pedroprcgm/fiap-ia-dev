@@ -1,0 +1,48 @@
+# Testado em Python 3.9, 3.10 e 3.11 (langchain 1.x exige Python >=3.10 e
+# quebrava a instalação em máquinas com Python mais antigo - por isso as
+# faixas abaixo, em vez de pins exatos, deixam o pip escolher a versão mais
+# recente compatível com o Python instalado).
+#
+# --- Orquestração (LangChain / LangGraph) ---
+langchain>=0.3.0,<1.0.0
+langchain-community>=0.3.0,<1.0.0
+langchain-core>=0.3.0,<1.0.0
+langchain-openai>=0.2.0,<1.0.0
+langgraph>=0.2.0,<1.0.0
+
+# --- RAG / vetorização ---
+# Chroma como vector store (padrão do material de referência); o embedding
+# usado por padrão é o TF-IDF local (src/llm/rag/embeddings.py), sem download de
+# modelo - troque por HuggingFaceEmbeddings/OpenAIEmbeddings em produção.
+chromadb>=0.5.0,<1.0.0
+scikit-learn>=1.3.0,<2.0.0
+
+# --- Dados / utilitários ---
+requests>=2.31.0,<3.0.0
+beautifulsoup4>=4.12.0,<5.0.0
+pandas>=2.0.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+pydantic>=2.0.0,<3.0.0
+
+# --- Testes ---
+pytest>=7.0.0,<9.0.0
+
+# --- Fine-tuning real (opcional) ---
+# Necessários apenas se você for carregar um adaptador LoRA de verdade via
+# src/llm/models/domain_llm.py::_carregar_lora_real (produzido pelo notebook
+# notebooks/fine_tuning_colab.ipynb). O demo local (src/llm/fine_tuning/
+# train_demo_cpu.py) NÃO precisa destes pacotes - usa só scikit-learn acima.
+# torch==2.4.1
+# transformers==4.44.2
+# peft==0.12.0
+# datasets==2.21.0
+# accelerate==0.34.2
+
+# --- Fine-tuning "de verdade" no Colab (GPU) ---
+# Instalado dentro do próprio notebook, não aqui, pois depende de CUDA/GPU:
+# unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git
+# xformers, trl, bitsandbytes
+
+# --- Servico HTTP interno para a UI (src/llm/service/) ---
+fastapi>=0.110.0,<1.0.0
+uvicorn>=0.29.0,<1.0.0

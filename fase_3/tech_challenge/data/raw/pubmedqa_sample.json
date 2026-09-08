@@ -1,0 +1,14 @@
+[
+  {
+    "question": "O uso de inibidores da ECA reduz eventos cardiovasculares em hipertensos?",
+    "answer": "Sim, estudos clinicos indicam reducao de eventos cardiovasculares maiores em pacientes hipertensos tratados com inibidores da ECA, especialmente em diabeticos."
+  },
+  {
+    "question": "Metformina e eficaz como primeira linha no diabetes tipo 2?",
+    "answer": "Sim, a metformina e recomendada como terapia de primeira linha por seu perfil de seguranca e eficacia no controle glicemico."
+  },
+  {
+    "question": "Antibioticoterapia empirica antecipada melhora desfechos em pneumonia grave?",
+    "answer": "Sim, o inicio precoce da antibioticoterapia empirica esta associado a reducao de mortalidade em pneumonia adquirida na comunidade grave."
+  }
+]

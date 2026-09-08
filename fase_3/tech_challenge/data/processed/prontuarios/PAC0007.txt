@@ -1,0 +1,12 @@
+PRONTUARIO - PAC0007
+Nome: Paciente Eta
+Idade: 65 | Sexo: M
+Condicao principal: Doenca do Refluxo Gastroesofagico
+Data de admissao: 2026-09-07
+
+Exames:
+  - Endoscopia digestiva alta: realizado (solicitado em 2026-08-28)
+
+Historico de eventos:
+  - 2026-09-07: Admissao com quadro sugestivo de Doenca do Refluxo Gastroesofagico. Paciente M, 65 anos.
+  - 2026-09-07: Reavaliacao clinica em curso, aguardando resultado de exames complementares.

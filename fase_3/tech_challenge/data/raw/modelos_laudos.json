@@ -1,0 +1,51 @@
+[
+  {
+    "type": "report_template",
+    "specialty": "Cardiologia",
+    "condition": "Hipertensao Arterial Sistemica",
+    "title": "Modelo de laudo - Hipertensao Arterial Sistemica",
+    "content": "MODELO DE LAUDO - CARDIOLOGIA\nHipotese diagnostica: Hipertensao Arterial Sistemica\nAchados compativeis: cefaleia, tontura, pressao arterial >= 140/90 mmHg em duas aferições.\nExames solicitados: Eletrocardiograma, Perfil lipidico, Funcao renal (ureia/creatinina).\nConduta sugerida: Reforcar mudanca de estilo de vida (reducao de sodio, atividade fisica) e iniciar inibidor da ECA em dose baixa, reavaliando em 4 semanas.\nObservacao: laudo-modelo de uso interno, os campos devem ser preenchidos e validados pelo medico responsavel antes de qualquer emissao.\n"
+  },
+  {
+    "type": "report_template",
+    "specialty": "Endocrinologia",
+    "condition": "Diabetes Mellitus tipo 2",
+    "title": "Modelo de laudo - Diabetes Mellitus tipo 2",
+    "content": "MODELO DE LAUDO - ENDOCRINOLOGIA\nHipotese diagnostica: Diabetes Mellitus tipo 2\nAchados compativeis: poliuria, polidipsia, glicemia de jejum >= 126 mg/dL em duas ocasioes.\nExames solicitados: Glicemia de jejum, Hemoglobina glicada (HbA1c), Funcao renal.\nConduta sugerida: Iniciar metformina, orientacao nutricional e reavaliacao de HbA1c em 90 dias.\nObservacao: laudo-modelo de uso interno, os campos devem ser preenchidos e validados pelo medico responsavel antes de qualquer emissao.\n"
+  },
+  {
+    "type": "report_template",
+    "specialty": "Pneumologia",
+    "condition": "Pneumonia Adquirida na Comunidade",
+    "title": "Modelo de laudo - Pneumonia Adquirida na Comunidade",
+    "content": "MODELO DE LAUDO - PNEUMOLOGIA\nHipotese diagnostica: Pneumonia Adquirida na Comunidade\nAchados compativeis: febre, tosse produtiva, dispneia, estertores localizados na ausculta.\nExames solicitados: Radiografia de torax, Hemograma completo, Proteina C reativa.\nConduta sugerida: Classificar gravidade (escore CURB-65); iniciar antibioticoterapia empirica conforme protocolo institucional e reavaliar em 48-72h.\nObservacao: laudo-modelo de uso interno, os campos devem ser preenchidos e validados pelo medico responsavel antes de qualquer emissao.\n"
+  },
+  {
+    "type": "report_template",
+    "specialty": "Gastroenterologia",
+    "condition": "Doenca do Refluxo Gastroesofagico",
+    "title": "Modelo de laudo - Doenca do Refluxo Gastroesofagico",
+    "content": "MODELO DE LAUDO - GASTROENTEROLOGIA\nHipotese diagnostica: Doenca do Refluxo Gastroesofagico\nAchados compativeis: pirose, regurgitacao acida, piora pos-prandial e ao deitar.\nExames solicitados: Endoscopia digestiva alta (se sinais de alarme), Nenhum exame se caso tipico.\nConduta sugerida: Orientar medidas antirrefluxo e iniciar inibidor de bomba de protons por 4-8 semanas.\nObservacao: laudo-modelo de uso interno, os campos devem ser preenchidos e validados pelo medico responsavel antes de qualquer emissao.\n"
+  },
+  {
+    "type": "report_template",
+    "specialty": "Ortopedia",
+    "condition": "Lombalgia Mecanica Aguda",
+    "title": "Modelo de laudo - Lombalgia Mecanica Aguda",
+    "content": "MODELO DE LAUDO - ORTOPEDIA\nHipotese diagnostica: Lombalgia Mecanica Aguda\nAchados compativeis: dor lombar sem irradiacao, sem sinais de alarme (febre, perda de peso, deficit neurologico).\nExames solicitados: Nenhum exame de imagem na fase aguda sem sinais de alarme.\nConduta sugerida: Analgesia, orientacao de manutencao de atividade e retorno se sinais de alarme ou ausencia de melhora em 4-6 semanas.\nObservacao: laudo-modelo de uso interno, os campos devem ser preenchidos e validados pelo medico responsavel antes de qualquer emissao.\n"
+  },
+  {
+    "type": "report_template",
+    "specialty": "Infectologia",
+    "condition": "Infeccao do Trato Urinario nao complicada",
+    "title": "Modelo de laudo - Infeccao do Trato Urinario nao complicada",
+    "content": "MODELO DE LAUDO - INFECTOLOGIA\nHipotese diagnostica: Infeccao do Trato Urinario nao complicada\nAchados compativeis: disuria, polaciuria, urgencia miccional, sem febre.\nExames solicitados: Urina tipo I (EAS), Urocultura se recorrencia ou falha terapeutica.\nConduta sugerida: Antibioticoterapia empirica de curta duracao conforme protocolo institucional e resistencia bacteriana local.\nObservacao: laudo-modelo de uso interno, os campos devem ser preenchidos e validados pelo medico responsavel antes de qualquer emissao.\n"
+  },
+  {
+    "type": "report_template",
+    "specialty": "Oncologia",
+    "condition": "Cancer de Mama",
+    "title": "Modelo de laudo - Cancer de Mama (por estagio)",
+    "content": "MODELO DE LAUDO - ONCOLOGIA\nHipotese diagnostica: Cancer de Mama\nAchados compativeis por estagio: estagio inicial (estagios I e II, doenca localizada): nodulo mamario palpavel ou achado em mamografia de rastreamento, sem sinais clinicos de disseminacao a distancia; estagio medio (estagio III, doenca localmente avancada): tumor de maior dimensao, possivel comprometimento de linfonodos axilares, pele ou parede toracica, sem metastase a distancia confirmada; estagio avancado (estagio IV, doenca metastatica): doenca com metastase confirmada (ossea, pulmonar, hepatica, cerebral ou outros sitios), podendo cursar com sintomas sistemicos como dor ossea, perda de peso e fadiga.\nObservacao: a conduta e os exames complementares dependem do estagio confirmado - consultar o protocolo interno correspondente. Laudo-modelo de uso interno, os campos devem ser preenchidos e validados pelo medico responsavel antes de qualquer emissao.\n"
+  }
+]

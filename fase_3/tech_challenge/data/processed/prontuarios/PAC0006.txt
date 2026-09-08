@@ -1,0 +1,12 @@
+PRONTUARIO - PAC0006
+Nome: Paciente Zeta
+Idade: 69 | Sexo: M
+Condicao principal: Infeccao do Trato Urinario nao complicada
+Data de admissao: 2026-08-31
+
+Exames:
+  - Urina tipo I (EAS): pendente (solicitado em 2026-08-30)
+
+Historico de eventos:
+  - 2026-08-31: Admissao com quadro sugestivo de Infeccao do Trato Urinario nao complicada. Paciente M, 69 anos.
+  - 2026-09-06: Reavaliacao clinica em curso, aguardando resultado de exames complementares.
