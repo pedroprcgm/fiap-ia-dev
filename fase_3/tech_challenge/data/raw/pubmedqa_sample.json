@@ -1,14 +1,122 @@
 [
   {
-    "question": "O uso de inibidores da ECA reduz eventos cardiovasculares em hipertensos?",
-    "answer": "Sim, estudos clinicos indicam reducao de eventos cardiovasculares maiores em pacientes hipertensos tratados com inibidores da ECA, especialmente em diabeticos."
+    "question": "Do mitochondria play a role in remodelling lace plant leaves during programmed cell death?",
+    "answer": "Results depicted mitochondrial dynamics in vivo as PCD progresses within the lace plant, and highlight the correlation of this organelle with other organelles during developmental PCD. To the best of our knowledge, this is the first report of mitochondria and chloroplasts moving on transvacuolar strands to form a ring structure surrounding the nucleus during developmental PCD. Also, for the first time, we have shown the feasibility for the use of CsA in a whole plant system. Overall, our findings implicate the mitochondria as playing a critical and early role in developmentally regulated PCD in the lace plant."
   },
   {
-    "question": "Metformina e eficaz como primeira linha no diabetes tipo 2?",
-    "answer": "Sim, a metformina e recomendada como terapia de primeira linha por seu perfil de seguranca e eficacia no controle glicemico."
+    "question": "Landolt C and snellen e acuity: differences in strabismus amblyopia?",
+    "answer": "Using the charts described, there was only a slight overestimation of visual acuity by the Snellen E compared to the Landolt C, even in strabismus amblyopia. Small differences in the lower visual acuity range have to be considered."
   },
   {
-    "question": "Antibioticoterapia empirica antecipada melhora desfechos em pneumonia grave?",
-    "answer": "Sim, o inicio precoce da antibioticoterapia empirica esta associado a reducao de mortalidade em pneumonia adquirida na comunidade grave."
+    "question": "Syncope during bathing in infants, a pediatric form of water-induced urticaria?",
+    "answer": "\"Aquagenic maladies\" could be a pediatric form of the aquagenic urticaria."
+  },
+  {
+    "question": "Are the long-term results of the transanal pull-through equal to those of the transabdominal pull-through?",
+    "answer": "Our long-term study showed significantly better (2-fold) results regarding the continence score for the abdominal approach compared with the transanal pull-through. The stool pattern and enterocolitis scores were somewhat better for the TERPT group. These findings raise an important issue about the current surgical management of HD; however, more cases will need to be studied before a definitive conclusion can be drawn."
+  },
+  {
+    "question": "Can tailored interventions increase mammography use among HMO women?",
+    "answer": "The effects of the intervention were most pronounced after the first intervention. Compared to usual care, telephone counseling seemed particularly effective at promoting change among nonadherent women, the group for whom the intervention was developed. These results suggest that telephone counseling, rather than tailored print, might be the preferred first-line intervention for getting nonadherent women on schedule for mammography screening. Many questions would have to be answered about why the tailored print intervention was not more powerful. Nevertheless, it is clear that additional interventions will be needed to maintain women's adherence to mammography. Medical Subject Headings (MeSH): mammography screening, telephone counseling, tailored print communications, barriers."
+  },
+  {
+    "question": "Double balloon enteroscopy: is it efficacious and safe in a community setting?",
+    "answer": "DBE appears to be equally safe and effective when performed in the community setting as compared to a tertiary referral center with a comparable yield, efficacy, and complication rate."
+  },
+  {
+    "question": "30-Day and 1-year mortality in emergency general surgery laparotomies: an area of concern and need for improvement?",
+    "answer": "Emergency laparotomy carries a high rate of mortality, especially in those over the age of 70 years, and more needs to be done to improve outcomes, particularly in this group. This could involve increasing acute surgical care manpower, early recognition of patients requiring emergency surgery, development of clear management protocols for such patients or perhaps even considering centralisation of emergency surgical services to specialist centres with multidisciplinary teams involving emergency surgeons and care of the elderly physicians in hospital and related community outreach services for post-discharge care."
+  },
+  {
+    "question": "Is adjustment for reporting heterogeneity necessary in sleep disorders?",
+    "answer": "Sleep disorders are common in the general adult population of Japan. Correction for reporting heterogeneity using anchoring vignettes is not a necessary tool for proper management of sleep and energy related problems among Japanese adults. Older age, gender differences in communicating sleep-related problems, the presence of multiple morbidities, and regular exercise should be the focus of policies and clinical practice to improve sleep and energy management in Japan."
+  },
+  {
+    "question": "Do mutations causing low HDL-C promote increased carotid intima-media thickness?",
+    "answer": "Genetic variants identified in the present study may be insufficient to promote early carotid atherosclerosis."
+  },
+  {
+    "question": "A short stay or 23-hour ward in a general and academic children's hospital: are they effective?",
+    "answer": "This data demonstrates the robust nature of the short stay ward. At these two very different institutions we have shown improved bed efficient and patient care in a cost-effective way. We have also reported on greater parental satisfaction and early return of the child with their family to the community."
+  },
+  {
+    "question": "Did Chile's traffic law reform push police enforcement?",
+    "answer": "Findings suggest that traffic law reforms in order to have an effect on both traffic fatality and injury rates reduction require changes in police enforcement practices. Last, this case also illustrates how the diffusion of successful road safety practices globally promoted by WHO and World Bank can be an important influence for enhancing national road safety practices."
+  },
+  {
+    "question": "Therapeutic anticoagulation in the trauma patient: is it safe?",
+    "answer": "Trauma patients have a significant complication rate related to anticoagulation therapy, and predicting which patients will develop a complication remains unclear. Prospective studies are needed to determine which treatment regimen, if any, is appropriate to safely anticoagulate this high risk population."
+  },
+  {
+    "question": "Differentiation of nonalcoholic from alcoholic steatohepatitis: are routine laboratory markers useful?",
+    "answer": "Higher MCVs and AST/ALT ratios in ASH reflect the severity of underlying liver disease and do not differentiate NASH from ASH. Instead, these biomarkers might prove useful in guiding selection of patients for liver biopsy and in targeting therapy."
+  },
+  {
+    "question": "Prompting Primary Care Providers about Increased Patient Risk As a Result of Family History: Does It Work?",
+    "answer": "No change occurred upon instituting simple, at-the-visit family history prompts geared to improve PCPs' ability to identify patients at high risk for 6 common conditions. The results are both surprising and disappointing. Further studies should examine physicians' perception of the utility of prompts for family history risk."
+  },
+  {
+    "question": "Do emergency ultrasound fellowship programs impact emergency medicine residents' ultrasound education?",
+    "answer": "Emergency US fellowship programs had a positive impact on residents' US educational experiences. Emergency medicine residents performed more scans overall and also used bedside US for more advanced applications in programs with EUS fellowships."
+  },
+  {
+    "question": "Patient-Controlled Therapy of Breathlessness in Palliative Care: A New Therapeutic Concept for Opioid Administration?",
+    "answer": "Opioid PCT is a feasible and acceptable therapeutic method to reduce refractory breathlessness in palliative care patients."
+  },
+  {
+    "question": "Is there still a need for living-related liver transplantation in children?",
+    "answer": "The short- and long-term outcomes after LRT and SLT did not differ significantly. To avoid the risk for the donor in LRT, SLT represents the first-line therapy in pediatric liver transplantation in countries where cadaveric organs are available. LRT provides a solution for urgent cases in which a cadaveric graft cannot be found in time or if the choice of the optimal time point for transplantation is vital."
+  },
+  {
+    "question": "Do patterns of knowledge and attitudes exist among unvaccinated seniors?",
+    "answer": "Findings suggest that cluster analyses may be useful in identifying groups for targeted health messages."
+  },
+  {
+    "question": "Is there a model to teach and practice retroperitoneoscopic nephrectomy?",
+    "answer": "RPN in a porcine model is feasible and could be very useful for teaching and practicing retroperitoneoscopy."
+  },
+  {
+    "question": "Cardiovascular risk in a rural adult West African population: is resting heart rate also relevant?",
+    "answer": "Significant associations were observed between RHR and several established cardiovascular risk factors. Prospective studies are needed in sub-Saharan African populations to establish the potential value of RHR in cardiovascular risk assessment."
+  },
+  {
+    "question": "Israeli hospital preparedness for terrorism-related multiple casualty incidents: can the surge capacity and injury severity distribution be better predicted?",
+    "answer": "Hospital preparedness can be better defined by a fixed number of casualties rather than a percentile of its bed capacity. Only 20% of the arriving casualties will require immediate medical treatment. Implementation of this concept may improve the utilisation of national emergency health resources both in the preparation phase and on real time."
+  },
+  {
+    "question": "Acute respiratory distress syndrome in children with malignancy--can we predict outcome?",
+    "answer": "Peak inspiratory pressure, PEEP, and ventilation index values could distinguish survivors from nonsurvivors by day 3. This may assist in early application of supportive nonconventional therapies in children with malignancy and ARDS."
+  },
+  {
+    "question": "Secondhand smoke risk in infants discharged from an NICU: potential for significant health disparities?",
+    "answer": "The most disadvantaged families were least likely to have protective health behaviors in place to reduce SHSe and, consequently, are most at-risk for tobacco exposure and subsequent tobacco-related health disparities. Innovative SHSe interventions for this vulnerable population are sorely needed."
+  },
+  {
+    "question": "Do nomograms designed to predict biochemical recurrence (BCR) do a better job of predicting more clinically relevant prostate cancer outcomes than BCR?",
+    "answer": "Currently available nomograms used to predict BCR accurately predict PCSM and other more clinically relevant endpoints. Moreover, not only do they significantly predict PCSM, but do so with generally greater accuracy than BCR."
+  },
+  {
+    "question": "Are reports of mechanical dysfunction in chronic oro-facial pain related to somatisation?",
+    "answer": "Self-reported mechanical factors associated with chronic oro-facial pain are confounded, in part, by psychological factors and are equally common across other frequently unexplained syndromes. They may represent another feature of somatisation. Therefore the use of extensive invasive therapy such as occlusal adjustments and surgery to change mechanical factors may not be justified in many cases."
+  },
+  {
+    "question": "Amblyopia: is visual loss permanent?",
+    "answer": "Older people with a history of amblyopia who develop visual loss in the previously normal eye can experience recovery of visual function in the amblyopic eye over a period of time. This recovery in visual function occurs in the wake of visual loss in the fellow eye and the improvement appears to be sustained."
+  },
+  {
+    "question": "Implementation of epidural analgesia for labor: is the standard of effective analgesia reachable in all women?",
+    "answer": "Present audit shows that the process of implementation of labor analgesia was quick, successful and safe, notwithstanding the identification of one cluster of women with suboptimal response to epidural analgesia that need to be further studies, overall pregnant womens'adhesion to labor analgesia was satisfactory."
+  },
+  {
+    "question": "Does HER2 immunoreactivity provide prognostic information in locally advanced urothelial carcinoma patients receiving adjuvant M-VEC chemotherapy?",
+    "answer": "HER2 immunoreactivity might have a limited prognostic value for advanced urothelial carcinoma patients with adjuvant M-VEC."
+  },
+  {
+    "question": "Is halofantrine ototoxic?",
+    "answer": "Halofantrine has mild to moderate pathological effects on cochlea histology, and can be considered an ototoxic drug."
+  },
+  {
+    "question": "Visceral adipose tissue area measurement at a single level: can it represent visceral adipose tissue volume?",
+    "answer": "VAT area measurement at a single level 3 cm above the lower margin of the L3 vertebra is feasible and can reflect changes in VAT volume and body weight. Advances in knowledge: As VAT area at a CT slice 3cm above the lower margin of L3 can best reflect interval changes in VAT volume and body weight, VAT area measurement should be selected at this location."
   }
 ]

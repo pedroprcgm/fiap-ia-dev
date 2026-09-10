@@ -1,13 +1,13 @@
 PRONTUARIO - PAC0008
-Nome: Paciente Teta
+Nome: Fernanda Lima
 Idade: 72 | Sexo: M
 Condicao principal: Diabetes Mellitus tipo 2
-Data de admissao: 2026-08-28
+Data de admissao: 2026-08-31
 
 Exames:
-  - Glicemia de jejum: realizado (solicitado em 2026-08-29)
-  - Hemoglobina glicada (HbA1c): pendente (solicitado em 2026-09-06)
+  - Glicemia de jejum: realizado (solicitado em 2026-09-01)
+  - Hemoglobina glicada (HbA1c): pendente (solicitado em 2026-09-09)
 
 Historico de eventos:
-  - 2026-08-28: Admissao com quadro sugestivo de Diabetes Mellitus tipo 2. Paciente M, 72 anos.
-  - 2026-09-04: Reavaliacao clinica em curso, aguardando resultado de exames complementares.
+  - 2026-08-31: Admissao com quadro sugestivo de Diabetes Mellitus tipo 2. Paciente M, 72 anos.
+  - 2026-09-07: Reavaliacao clinica em curso, aguardando resultado de exames complementares.

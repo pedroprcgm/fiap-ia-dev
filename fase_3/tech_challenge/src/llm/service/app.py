@@ -36,7 +36,10 @@ _graph = build_graph()
 
 
 class AskRequest(BaseModel):
-    patient_id: str
+    # None/omitted for a general question with no patient selected (see
+    # src/llm/langchain_app/chains.py::invoke and Tela 1 of the UI, which now
+    # offers "pergunta geral" alongside the patient list).
+    patient_id: Optional[str] = None
     question: str
 
 

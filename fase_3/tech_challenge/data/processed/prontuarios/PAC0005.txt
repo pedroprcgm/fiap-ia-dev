@@ -1,13 +1,13 @@
 PRONTUARIO - PAC0005
-Nome: Paciente Epsilon
+Nome: Pedro Costa
 Idade: 60 | Sexo: F
 Condicao principal: Diabetes Mellitus tipo 2
-Data de admissao: 2026-09-01
+Data de admissao: 2026-09-04
 
 Exames:
-  - Glicemia de jejum: realizado (solicitado em 2026-08-30)
-  - Hemoglobina glicada (HbA1c): pendente (solicitado em 2026-09-01)
+  - Glicemia de jejum: realizado (solicitado em 2026-09-02)
+  - Hemoglobina glicada (HbA1c): pendente (solicitado em 2026-09-04)
 
 Historico de eventos:
-  - 2026-09-01: Admissao com quadro sugestivo de Diabetes Mellitus tipo 2. Paciente F, 60 anos.
-  - 2026-09-07: Reavaliacao clinica em curso, aguardando resultado de exames complementares.
+  - 2026-09-04: Admissao com quadro sugestivo de Diabetes Mellitus tipo 2. Paciente F, 60 anos.
+  - 2026-09-10: Reavaliacao clinica em curso, aguardando resultado de exames complementares.

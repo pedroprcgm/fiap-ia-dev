@@ -20,7 +20,7 @@ export class ApiService {
     return this.http.get<Patient[]>(`${this.baseUrl}/patients`);
   }
 
-  ask(patientId: string, question: string): Observable<AskResponse> {
+  ask(patientId: string | null, question: string): Observable<AskResponse> {
     return this.http.post<AskResponse>(`${this.baseUrl}/ask`, {
       patient_id: patientId,
       question,

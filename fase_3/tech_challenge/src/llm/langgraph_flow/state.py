@@ -4,12 +4,15 @@ Aula 01/02 - Introducao ao LangGraph of the reference material: each node
 reads and writes fields of this dictionary, and LangGraph takes care of
 propagating the state between nodes.
 """
-from typing import TypedDict
+from typing import Optional, TypedDict
 
 
 class AssistantState(TypedDict, total=False):
     # input
-    patient_id: str
+    # None when the doctor asks a general question with no patient selected
+    # (see src/llm/service/app.py::AskRequest) - every patient-specific node
+    # below (exam_verifier, chains.py::invoke) knows to skip its lookups.
+    patient_id: Optional[str]
     question: str
     run_id: str
 

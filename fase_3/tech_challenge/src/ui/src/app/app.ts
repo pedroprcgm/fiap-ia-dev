@@ -25,6 +25,11 @@ export class App implements OnInit {
   protected readonly asking = signal(false);
   protected readonly askError = signal<string | null>(null);
   protected readonly answer = signal<AskResponse | null>(null);
+  // Copia da pergunta no momento do envio, para exibir na Tela 3 junto da
+  // resposta - guardada a parte de `question` (em vez de reusar o mesmo
+  // signal) porque este ultimo alimenta o textarea da Tela 2 e continuaria
+  // mudando se o medico digitasse ali antes de ver a resposta.
+  protected readonly askedQuestion = signal('');
 
   constructor(private readonly api: ApiService) {}
 
@@ -42,7 +47,7 @@ export class App implements OnInit {
       },
       error: () => {
         this.patientsError.set(
-          'Nao foi possivel carregar a lista de pacientes. Verifique a conexao e tente novamente.'
+          'Não foi possível carregar a lista de pacientes. Verifique a conexão e tente novamente.'
         );
         this.loadingPatients.set(false);
       },
@@ -53,6 +58,20 @@ export class App implements OnInit {
     this.selectedPatient.set(patient);
     this.question.set('');
     this.answer.set(null);
+    this.askedQuestion.set('');
+    this.askError.set(null);
+    this.screen.set('ask-question');
+  }
+
+  // Pergunta geral, sem relacao com um paciente especifico (ex.: duvida
+  // sobre um protocolo interno) - pula a selecao de paciente da Tela 1.
+  // Quando a pergunta e sobre um paciente, o medico continua so selecionando
+  // ele na lista (selectPatient acima), sem nenhuma etapa extra.
+  askWithoutPatient(): void {
+    this.selectedPatient.set(null);
+    this.question.set('');
+    this.answer.set(null);
+    this.askedQuestion.set('');
     this.askError.set(null);
     this.screen.set('ask-question');
   }
@@ -68,15 +87,17 @@ export class App implements OnInit {
   }
 
   submitQuestion(): void {
+    // patient e opcional: null quando a pergunta e geral (askWithoutPatient).
     const patient = this.selectedPatient();
     const question = this.question().trim();
-    if (!patient || !question) {
+    if (!question) {
       return;
     }
 
     this.asking.set(true);
     this.askError.set(null);
-    this.api.ask(patient.patient_id, question).subscribe({
+    this.askedQuestion.set(question);
+    this.api.ask(patient?.patient_id ?? null, question).subscribe({
       next: (response) => {
         this.answer.set(response);
         this.asking.set(false);
@@ -84,7 +105,7 @@ export class App implements OnInit {
       },
       error: () => {
         this.askError.set(
-          'Nao foi possivel obter uma resposta agora. Tente novamente em instantes.'
+          'Não foi possível obter uma resposta agora. Tente novamente em instantes.'
         );
         this.asking.set(false);
       },
@@ -94,6 +115,7 @@ export class App implements OnInit {
   askAnotherQuestion(): void {
     this.question.set('');
     this.answer.set(null);
+    this.askedQuestion.set('');
     this.askError.set(null);
     this.screen.set('ask-question');
   }

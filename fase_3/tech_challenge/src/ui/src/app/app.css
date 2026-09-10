@@ -139,6 +139,11 @@ button.secondary {
   padding: 0.6rem 1rem;
 }
 
+.general-question-button {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 .link-back {
   background: none;
   border: none;
@@ -146,6 +151,14 @@ button.secondary {
   padding: 0;
   margin-bottom: 1rem;
   font-weight: 600;
+}
+
+.asked-question {
+  font-style: italic;
+  color: #52606d;
+  border-left: 3px solid #d9e2ec;
+  padding-left: 0.75rem;
+  margin: 0.75rem 0 1.25rem;
 }
 
 .response-text {

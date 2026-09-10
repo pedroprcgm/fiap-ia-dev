@@ -5,6 +5,10 @@ validate the pipeline and as a script for the demo video requested by the
 challenge (showing the flow running, the contextualized response and the
 logs/validation).
 """
+# Allows `Type | None` (PEP 604) on Python 3.9, which only supports that
+# syntax natively from 3.10 onward.
+from __future__ import annotations
+
 import argparse
 import sqlite3
 from pathlib import Path
@@ -37,7 +41,7 @@ def _first_patient_id() -> str:
     return patient_id
 
 
-def run_demo(patient_id: str, question: str):
+def run_demo(patient_id: str | None, question: str):
     if not DB_PATH.exists():
         raise SystemExit(
             "Base de pacientes nao encontrada. Rode antes:\n"
@@ -54,7 +58,7 @@ def run_demo(patient_id: str, question: str):
     print("=" * 78)
     print(f"ASSISTENTE MEDICO VIRTUAL - HOSPITAL XPTO  |  execucao {run_id}")
     print("=" * 78)
-    print(f"Paciente: {patient_id}")
+    print(f"Paciente: {patient_id or '(pergunta geral, sem paciente associado)'}")
     print(f"Pergunta do medico: {question}\n")
 
     final_state = graph.invoke({
@@ -97,10 +101,17 @@ if __name__ == "__main__":
     parser.add_argument("--paciente", default=None, help="ID do paciente (ex.: PAC0001)")
     parser.add_argument("--pergunta", default="Qual a conduta recomendada para este paciente?")
     parser.add_argument("--listar-pacientes", action="store_true")
+    parser.add_argument(
+        "--sem-paciente",
+        action="store_true",
+        help="Pergunta geral, sem associar a um paciente (ver Tela 1 da UI).",
+    )
     args = parser.parse_args()
 
     if args.listar_pacientes:
         list_patients()
+    elif args.sem_paciente:
+        run_demo(None, args.pergunta)
     else:
         patient_id = args.paciente or _first_patient_id()
         run_demo(patient_id, args.pergunta)

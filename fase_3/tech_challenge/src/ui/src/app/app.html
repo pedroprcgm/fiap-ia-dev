@@ -1,14 +1,14 @@
 <div class="page">
   <header class="page-header">
-    <h1>Assistente Medico Virtual</h1>
-    <p class="subtitle">Apoio a decisao clinica</p>
+    <h1>Assistente Médico Virtual</h1>
+    <p class="subtitle">Apoio à decisão clínica</p>
   </header>
 
   <main class="page-body">
     <!-- Tela 1: selecao de paciente -->
     @if (screen() === 'select-patient') {
       <section class="card">
-        <h2>Selecione o paciente</h2>
+        <h2>Nova pergunta</h2>
 
         @if (loadingPatients()) {
           <p class="muted">Carregando pacientes...</p>
@@ -20,9 +20,14 @@
         }
 
         @if (!loadingPatients() && !patientsError()) {
+          <button type="button" class="secondary general-question-button" (click)="askWithoutPatient()">
+            Fazer uma pergunta geral (sem selecionar paciente)
+          </button>
+
           @if (patients().length === 0) {
             <p class="muted">Nenhum paciente encontrado.</p>
           } @else {
+            <p class="muted">Ou, se a pergunta for sobre um paciente, selecione-o abaixo:</p>
             <ul class="patient-list">
               @for (patient of patients(); track patient.patient_id) {
                 <li>
@@ -38,13 +43,18 @@
       </section>
     }
 
-    <!-- Tela 2: pergunta -->
-    @if (screen() === 'ask-question' && selectedPatient(); as patient) {
+    <!-- Tela 2: pergunta (com paciente selecionado ou geral) -->
+    @if (screen() === 'ask-question') {
       <section class="card">
-        <button type="button" class="link-back" (click)="backToPatientSelection()">&larr; Trocar paciente</button>
+        <button type="button" class="link-back" (click)="backToPatientSelection()">&larr; Voltar</button>
 
-        <h2>{{ patient.name }}</h2>
-        <p class="muted">{{ patient.main_condition }}</p>
+        @if (selectedPatient(); as patient) {
+          <h2>{{ patient.name }}</h2>
+          <p class="muted">{{ patient.main_condition }}</p>
+        } @else {
+          <h2>Pergunta geral</h2>
+          <p class="muted">Sem paciente específico associado a esta pergunta.</p>
+        }
 
         <label for="question">Sua pergunta</label>
         <textarea
@@ -52,7 +62,7 @@
           rows="4"
           [ngModel]="question()"
           (ngModelChange)="question.set($event)"
-          placeholder="Ex.: Quais os proximos passos de tratamento recomendados?"
+          placeholder="Ex.: Quais os próximos passos de tratamento recomendados?"
         ></textarea>
 
         @if (askError()) {
@@ -76,6 +86,14 @@
         <button type="button" class="link-back" (click)="backToQuestion()">&larr; Voltar</button>
 
         <h2>Resposta</h2>
+        <p class="muted">
+          @if (selectedPatient(); as patient) {
+            Paciente: {{ patient.name }}
+          } @else {
+            Pergunta geral (sem paciente associado)
+          }
+        </p>
+        <p class="asked-question">"{{ askedQuestion() }}"</p>
         <p class="response-text">{{ response.response_text }}</p>
 
         @if (response.pending_exam_notice) {

@@ -1,12 +1,12 @@
 PRONTUARIO - PAC0007
-Nome: Paciente Eta
+Nome: Lucas Almeida
 Idade: 65 | Sexo: M
 Condicao principal: Doenca do Refluxo Gastroesofagico
-Data de admissao: 2026-09-07
+Data de admissao: 2026-09-10
 
 Exames:
-  - Endoscopia digestiva alta: realizado (solicitado em 2026-08-28)
+  - Endoscopia digestiva alta: realizado (solicitado em 2026-08-31)
 
 Historico de eventos:
-  - 2026-09-07: Admissao com quadro sugestivo de Doenca do Refluxo Gastroesofagico. Paciente M, 65 anos.
-  - 2026-09-07: Reavaliacao clinica em curso, aguardando resultado de exames complementares.
+  - 2026-09-10: Admissao com quadro sugestivo de Doenca do Refluxo Gastroesofagico. Paciente M, 65 anos.
+  - 2026-09-10: Reavaliacao clinica em curso, aguardando resultado de exames complementares.

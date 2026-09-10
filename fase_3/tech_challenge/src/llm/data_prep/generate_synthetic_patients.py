@@ -29,9 +29,15 @@ DB_PATH = BASE_DIR / "data" / "db" / "hospital.sqlite3"
 CSV_PATH = BASE_DIR / "data" / "processed" / "pacientes.csv"
 MEDICAL_RECORDS_DIR = BASE_DIR / "data" / "processed" / "prontuarios"
 
+# Nomes ficticios simples (nao ha nenhum paciente real por tras deles - ver
+# docstring do modulo), escolhidos para soar naturais numa UI real em vez de
+# rotulos abstratos como "Paciente Alfa"/"Paciente Beta". Com acentuacao
+# correta: diferente do restante deste arquivo (mantido em ASCII por
+# convencao do projeto), o nome nunca passa pelo vetorizador TF-IDF, entao
+# nao ha motivo para evitar acentos aqui - e o que aparece de fato na UI.
 FICTIONAL_NAMES = [
-    "Paciente Alfa", "Paciente Beta", "Paciente Gama", "Paciente Delta",
-    "Paciente Epsilon", "Paciente Zeta", "Paciente Eta", "Paciente Teta",
+    "João Silva", "Maria Oliveira", "José Santos", "Ana Pereira",
+    "Pedro Costa", "Carla Souza", "Lucas Almeida", "Fernanda Lima",
 ]
 
 CONDITIONS = [

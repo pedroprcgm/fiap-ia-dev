@@ -1,13 +1,13 @@
 PRONTUARIO - PAC0002
-Nome: Paciente Beta
+Nome: Maria Oliveira
 Idade: 42 | Sexo: F
 Condicao principal: Diabetes Mellitus tipo 2
-Data de admissao: 2026-09-04
+Data de admissao: 2026-09-07
 
 Exames:
-  - Glicemia de jejum: pendente (solicitado em 2026-09-02)
-  - Hemoglobina glicada (HbA1c): pendente (solicitado em 2026-09-06)
+  - Glicemia de jejum: pendente (solicitado em 2026-09-05)
+  - Hemoglobina glicada (HbA1c): pendente (solicitado em 2026-09-09)
 
 Historico de eventos:
-  - 2026-09-04: Admissao com quadro sugestivo de Diabetes Mellitus tipo 2. Paciente F, 42 anos.
-  - 2026-09-02: Reavaliacao clinica em curso, aguardando resultado de exames complementares.
+  - 2026-09-07: Admissao com quadro sugestivo de Diabetes Mellitus tipo 2. Paciente F, 42 anos.
+  - 2026-09-05: Reavaliacao clinica em curso, aguardando resultado de exames complementares.

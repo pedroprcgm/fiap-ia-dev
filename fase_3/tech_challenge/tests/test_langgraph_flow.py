@@ -40,6 +40,26 @@ def test_full_flow_produces_response_with_human_validation(graph):
     assert final_state["response"]["requires_human_validation"] is True
 
 
+def test_general_question_with_no_patient_still_produces_response(graph):
+    """The doctor can ask a general question with no patient selected (Tela
+    1 of the UI now offers this alongside the patient list) - patient_id is
+    simply None/absent, and every patient-specific node (exam_verifier,
+    treatment_suggestion's chains.py::invoke) should skip its lookups
+    instead of failing."""
+    run_id = new_run_id()
+
+    final_state = graph.invoke({
+        "patient_id": None,
+        "question": "Qual o protocolo interno para Hipertensao Arterial Sistemica?",
+        "run_id": run_id,
+    })
+
+    assert final_state["response"]["response_text"]
+    assert final_state["pending_exams"] == []
+    assert final_state["pending_human_validation"] is True
+    assert "geral" in final_state["medical_team_alert"].lower()
+
+
 def test_all_nodes_log_audit_events(graph):
     patient_id = _first_patient_id()
     run_id = new_run_id()

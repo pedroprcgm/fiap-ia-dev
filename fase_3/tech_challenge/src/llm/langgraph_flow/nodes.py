@@ -19,10 +19,24 @@ _assistant_chain = MedicalAssistantChain()
 
 
 def exam_verifier_node(state: AssistantState) -> dict:
-    result = _exam_agent.act(state["patient_id"])
+    patient_id = state.get("patient_id")
+
+    if not patient_id:
+        # General question, no patient selected - there's nothing to verify
+        # exams for, so this node is a no-op (see chains.py::invoke, which
+        # skips patient lookups the same way for the same reason).
+        notes = "Pergunta geral, sem paciente associado - verificacao de exames nao se aplica."
+        log_event(state["run_id"], "exam_verifier", {
+            "patient_id": None,
+            "pending_exams": [],
+            "notes": notes,
+        })
+        return {"pending_exams": [], "exam_notes": notes}
+
+    result = _exam_agent.act(patient_id)
 
     log_event(state["run_id"], "exam_verifier", {
-        "patient_id": state["patient_id"],
+        "patient_id": patient_id,
         "pending_exams": result.pending_exams,
         "notes": result.notes,
     })
@@ -45,10 +59,11 @@ def rag_context_node(state: AssistantState) -> dict:
 
 
 def treatment_suggestion_node(state: AssistantState) -> dict:
-    response = _assistant_chain.invoke(state["patient_id"], state["question"])
+    patient_id = state.get("patient_id")
+    response = _assistant_chain.invoke(patient_id, state["question"])
 
     log_event(state["run_id"], "treatment_suggestion", {
-        "patient_id": state["patient_id"],
+        "patient_id": patient_id,
         "response": response.model_dump(),
     })
 
@@ -77,6 +92,8 @@ def guardrails_node(state: AssistantState) -> dict:
 
 
 def alerts_log_node(state: AssistantState) -> dict:
+    patient_id = state.get("patient_id")
+
     if not state["guardrail_approved"]:
         alert = (
             f"BLOQUEADO pelos guardrails: {state['guardrail_reason']} "
@@ -85,13 +102,18 @@ def alerts_log_node(state: AssistantState) -> dict:
     elif state["pending_exams"]:
         alert = (
             f"Sugestao gerada com exame(s) pendente(s) para o paciente "
-            f"{state['patient_id']}. Equipe medica notificada para validar "
+            f"{patient_id}. Equipe medica notificada para validar "
             f"a sugestao considerando essa pendencia."
+        )
+    elif patient_id:
+        alert = (
+            f"Sugestao gerada para o paciente {patient_id} e enviada "
+            f"para validacao humana (nenhuma acao e tomada automaticamente)."
         )
     else:
         alert = (
-            f"Sugestao gerada para o paciente {state['patient_id']} e enviada "
-            f"para validacao humana (nenhuma acao e tomada automaticamente)."
+            "Resposta gerada para uma pergunta geral, sem paciente associado, "
+            "e enviada para validacao humana (nenhuma acao e tomada automaticamente)."
         )
 
     log_event(state["run_id"], "alerts_log", {

@@ -24,7 +24,8 @@ com segurança, logging e explainability.
 (1) Verificador de Exames  --> consulta SQLite de exames (LangChain Document Loader)
         |
         v
-(2) Contexto (RAG)         --> busca em protocolos/FAQs/laudos, com fonte rastreada
+(2) Contexto (RAG)         --> busca em protocolos/FAQs/laudos + prontuário do
+                               paciente (LangChain TextLoader), com fonte rastreada
         |
         v
 (3) Sugestão de Conduta    --> LLM de domínio (fine-tuned ou demo) + contexto do RAG
@@ -65,8 +66,6 @@ funcional com este projeto (14/14 testes e demo passando nessa combinação).
 python -m src.llm.data_prep.generate_synthetic_hospital_data
 
 # 2) amostra dos datasets públicos sugeridos no desafio (PubMedQA/MedQuAD)
-#    - com internet, baixa uma amostra real; sem internet, usa um fallback
-#      offline embutido, para o pipeline nunca travar por falta de rede.
 python -m src.llm.data_prep.prepare_public_datasets
 
 # 3) consolida tudo (com anonimização e curadoria) no dataset de fine-tuning
@@ -120,11 +119,17 @@ npm install                   # se der erro de peer deps, use: npm install --leg
 npm start                     # sobe em http://localhost:4200
 ```
 
-Abra `http://localhost:4200`: Tela 1 lista os pacientes (via `GET /patients`),
-Tela 2 recebe a pergunta do médico para o paciente selecionado, Tela 3 mostra
-a resposta já filtrada (`POST /ask`) — nunca nível de confiança, informação
-de guardrail ou alerta de validação humana (ver `src/llm/service/doctor_view.py`,
-o único ponto do código que decide o que o médico pode ver).
+Abra `http://localhost:4200`: Tela 1 lista os pacientes (via `GET /patients`)
+e também oferece "Fazer uma pergunta geral (sem selecionar paciente)", para
+dúvidas sem relação com um paciente específico (ex.: um protocolo interno)
+— quando a pergunta é sobre um paciente, o médico continua só selecionando-o
+na lista, sem etapa extra. Tela 2 recebe a pergunta do médico (com ou sem
+paciente associado), Tela 3 mostra a resposta já filtrada (`POST /ask`) —
+nunca nível de confiança, informação de guardrail ou alerta de validação
+humana (ver `src/llm/service/doctor_view.py`, o único ponto do código que
+decide o que o médico pode ver). `patient_id` é opcional em toda a cadeia
+(API Node, serviço Python, LangGraph) — sem paciente, o nó de verificação de
+exames é pulado e a sugestão de conduta usa só o contexto do RAG.
 
 Nota: `npm install` em `src/ui` pode falhar com
 `Cannot read properties of null (reading 'edgesOut')` — é um bug conhecido do
@@ -171,6 +176,68 @@ GPU. Este repositório traz **dois caminhos**, plugáveis via
 com base no que existir em `FINE_TUNED_MODEL_PATH` — o resto do sistema
 (RAG, LangChain, LangGraph) não muda em nenhum dos três casos.
 
+## Avaliando o que o fine-tuning realmente contribuiu
+
+Com o RAG no meio do caminho, é difícil enxergar o efeito do fine-tuning: o
+RAG já entrega ao modelo o texto do protocolo relevante, e qualquer modelo
+instruct razoável já responde bem só de ler esse contexto. Para isolar o
+que veio de fato do fine-tuning (e não do RAG), o dataset inclui uma
+condição **exclusiva do fine-tuning**:
+`src/llm/data_prep/build_fine_tuning_dataset.py::FINE_TUNING_ONLY_CONDITIONS`
+(hoje, "Crise Asmática Aguda") gera exemplos de treino com os mesmos
+templates usados para os protocolos normais, mas **nunca grava nada em
+`data/raw/`** — então `HospitalKnowledgeBase` (RAG) não tem nenhum
+documento sobre essa condição. Perguntando sobre ela, o RAG não recupera
+contexto relevante nenhum; só um modelo que realmente aprendeu esse
+conteúdo durante o fine-tuning consegue responder corretamente.
+
+`src/llm/fine_tuning/compare_base_vs_finetuned.py` usa exatamente isso:
+carrega o modelo base (sem adaptador) e o modelo fine-tuned (com o
+adaptador do MLX) lado a lado, e roda as mesmas perguntas nos dois —
+primeiro as exclusivas do fine-tuning (sem contexto do RAG, onde a
+diferença tende a ser grande) e depois algumas perguntas normais com
+contexto do RAG (onde a diferença tende a ser só de tom/formato). Requer
+macOS Apple Silicon, como o notebook de treino:
+
+```bash
+python -m src.llm.fine_tuning.compare_base_vs_finetuned
+```
+
+Como o RAG não tem nenhum documento sobre essas condições, uma pergunta
+sobre elas via `MedicalAssistantChain`/UI (não só o script de comparação)
+também precisa de tratamento: TF-IDF nunca diz "nada relevante encontrado"
+— sempre devolve os k documentos mais próximos, mesmo que nenhum tenha
+relação real com a pergunta. Sem um paciente para ancorar a busca (ver
+próxima seção), isso já retornou uma fonte completamente errada (ex.: uma
+pergunta geral sobre "crise asmática" trouxe uma FAQ de "Câncer de Mama").
+
+Por isso `chains.py::_FinetuningOnlyMatcher` reconhece essas perguntas e
+pula o RAG inteiramente para elas, deixando o modelo de domínio responder
+só com o que aprendeu no fine-tuning (exatamente o mesmo cenário do script
+de comparação acima). Esse reconhecimento é **derivado dos dados, não
+hardcoded**: todo exemplo em `data/processed/dataset_fine_tuning.jsonl`
+carrega um campo `in_rag` (gravado por `build_fine_tuning_dataset.py`,
+`True` quando o mesmo conteúdo também existe em `data/raw/`, `False`
+quando não existe — PubMedQA/MedQuAD e `FINE_TUNING_ONLY_CONDITIONS`).
+`_FinetuningOnlyMatcher` compara a pergunta do médico (por TF-IDF) contra
+os exemplos `in_rag=False`, usando pergunta+resposta de cada exemplo (não
+só a pergunta) — comparar só perguntas fazia o template da pergunta
+alternativa de `FINE_TUNING_ONLY_CONDITIONS` ("Quais os próximos passos
+para um paciente com X?") dominar o score para qualquer condição X, já que
+esse template não é usado em nenhum outro exemplo do dataset e por isso é
+a sequência mais "rara" (maior peso IDF) do corpus inteiro; incluir a
+resposta traz vocabulário clínico específico da condição, que domina o
+score corretamente. Adicionar uma nova condição exclusiva não exige
+nenhuma mudança neste arquivo — só regenerar o dataset.
+
+Se você adicionar mais condições exclusivas em
+`FINE_TUNING_ONLY_CONDITIONS`, rode de novo
+`python -m src.llm.data_prep.build_fine_tuning_dataset`, depois
+`python -m src.llm.fine_tuning.train_demo_cpu` (para o backend demo
+reconhecer a condição nova) e depois o notebook
+de fine-tuning (`fine_tuning_local_mlx.ipynb`) para o adaptador aprender o
+conteúdo novo antes de comparar.
+
 ## Sobre embeddings do RAG
 
 Pelo mesmo motivo (sem acesso a modelos via internet em todo ambiente), o
@@ -178,9 +245,17 @@ Pelo mesmo motivo (sem acesso a modelos via internet em todo ambiente), o
 de um modelo neural (ex.: `sentence-transformers`, usado no material de
 referência via `InstructorEmbedding`). Isso é lexical, não semântico:
 encontra bem documentos que compartilham vocabulário com a pergunta, mas não
-generaliza sinônimos. Para produção, troque `TfidfEmbeddings` por
-`HuggingFaceEmbeddings` (langchain-community) com um modelo multilíngue —
-nenhum outro módulo precisa mudar.
+generaliza sinônimos. O vetorizador usa bigramas e uma lista de stopwords em
+português (em vez da configuração padrão do `TfidfVectorizer`, que não tem
+stopwords para português) para reduzir esse efeito — mas isso ameniza, não
+elimina: documentos mais longos/verbosos (ex.: "Câncer de Mama", com 3
+variações por estágio) ainda podem vencer por pura sobreposição de palavras
+genéricas ("tratamento", "avaliação") mesmo quando um termo bem mais
+específico da pergunta (ex.: "diabetes") só aparece no documento certo,
+porque esse termo raro pesa menos que vários termos comuns repetidos. Para
+produção, troque `TfidfEmbeddings` por `HuggingFaceEmbeddings`
+(langchain-community) com um modelo multilíngue — nenhum outro módulo
+precisa mudar.
 
 ## Sobre a camada de orquestração (OpenAI)
 
@@ -223,7 +298,7 @@ tech_challenge/
 ├── src/
 │   ├── llm/                  # todo o agente de IA (fine-tuning, RAG, LangChain, LangGraph)
 │   │   ├── data_prep/         # geração de dados sintéticos, anonimização, curadoria
-│   │   ├── fine_tuning/       # treino demo (CPU), conversão de dataset p/ mlx-lm e avaliação do modelo
+│   │   ├── fine_tuning/       # treino demo (CPU), conversão de dataset p/ mlx-lm, avaliação e comparação base vs. fine-tuned
 │   │   ├── rag/               # embeddings TF-IDF + índice vetorial (Chroma)
 │   │   ├── langchain_app/     # document loaders, prompts, chain, agent
 │   │   ├── langgraph_flow/    # state, nós e o grafo (StateGraph)

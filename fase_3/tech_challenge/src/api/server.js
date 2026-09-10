@@ -50,10 +50,13 @@ app.get("/patients", async (_req, res) => {
 // POST /ask {patient_id, question} - devolve o DoctorView ja filtrado pelo
 // servico Python (response_text, sources, pending_exam_notice). Nunca
 // adiciona nem remove campos dessa resposta - ver RF07 na especificacao.
+//
+// patient_id e opcional: o medico pode fazer uma pergunta geral, sem
+// selecionar paciente (Tela 1 da UI) - so a question e obrigatoria.
 app.post("/ask", async (req, res) => {
   const { patient_id: patientId, question } = req.body || {};
-  if (!patientId || !question) {
-    return res.status(400).json({ error: "patient_id e question sao obrigatorios." });
+  if (!question) {
+    return res.status(400).json({ error: "question e obrigatoria." });
   }
 
   try {

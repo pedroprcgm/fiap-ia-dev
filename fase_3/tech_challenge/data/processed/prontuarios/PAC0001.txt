@@ -1,12 +1,12 @@
 PRONTUARIO - PAC0001
-Nome: Paciente Alfa
+Nome: João Silva
 Idade: 35 | Sexo: F
 Condicao principal: Infeccao do Trato Urinario nao complicada
-Data de admissao: 2026-08-30
+Data de admissao: 2026-09-02
 
 Exames:
-  - Urina tipo I (EAS): realizado (solicitado em 2026-09-05)
+  - Urina tipo I (EAS): realizado (solicitado em 2026-09-08)
 
 Historico de eventos:
-  - 2026-08-30: Admissao com quadro sugestivo de Infeccao do Trato Urinario nao complicada. Paciente F, 35 anos.
-  - 2026-09-07: Reavaliacao clinica em curso, aguardando resultado de exames complementares.
+  - 2026-09-02: Admissao com quadro sugestivo de Infeccao do Trato Urinario nao complicada. Paciente F, 35 anos.
+  - 2026-09-10: Reavaliacao clinica em curso, aguardando resultado de exames complementares.
