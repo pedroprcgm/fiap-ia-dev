@@ -1,10 +1,4 @@
 """
-Builds the medical assistant's StateGraph - the central orchestration
-requested by the challenge ("automated and safe decision flows...
-coordinated with LangChain/LangGraph"), following the pattern taught in
-Aulas 01-04 of the course's LangGraph module (StateGraph, nodes, edges,
-shared state).
-
 Flow:
     Exam Verifier -> Context (RAG) -> Treatment Suggestion
         -> Guardrails -> Alerts / Log -> END
